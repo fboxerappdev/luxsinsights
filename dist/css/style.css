@@ -1,3 +1,12 @@
+.transition,
+.left-bar,
+.display-bar {
+  -webkit-transition: all 0.3s ease 0s;
+  -moz-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  -ms-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
 * {
   outline: none !important;
 }
@@ -19,4 +28,89 @@ ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
+}
+.main-container {
+  height: 100%;
+  overflow: hidden;
+  position: fixed;
+  width: 100%;
+}
+.left-bar {
+  background: #222752 none repeat scroll 0 0;
+  height: 100%;
+  padding: 0 19px;
+  position: absolute;
+  width: 350px;
+  z-index: 8;
+  left: 0;
+}
+.left-bar.open {
+  left: -350px;
+}
+.left-bar form {
+  padding: 30px 0;
+}
+.left-bar .form-group {
+  margin-bottom: 15px;
+}
+.left-bar .form-group.big {
+  margin: 0 0 50px;
+}
+.left-bar .form-group.big label {
+  font-size: 17px;
+}
+.left-bar .form-group.big input {
+  font-weight: bold;
+}
+.left-bar .form-group label {
+  color: #fff;
+  float: left;
+  font-family: Georgia;
+  font-weight: normal;
+  width: 40%;
+  margin: 3px 0;
+}
+.left-bar .form-group input {
+  color: #000;
+  font-family: Georgia;
+  font-size: 17px;
+  font-weight: 500;
+  height: 26px;
+  padding: 0 4px;
+  width: 60%;
+}
+.display-bar {
+  background: #f4f4f4 none repeat scroll 0 0;
+  float: left;
+  height: 500px;
+  padding-left: 350px;
+  position: relative;
+  width: 100%;
+}
+.display-bar.open {
+  padding-left: 0;
+}
+.display-bar header {
+  display: inline-block;
+  padding: 10px 20px;
+  width: 100%;
+}
+.display-bar header .toggle {
+  float: left;
+  margin: 20px 10px 20px -18px;
+  padding: 10px 0;
+  cursor: pointer;
+}
+.display-bar header .logo {
+  display: inline-block;
+  width: 150px;
+}
+.display-bar header .logo img {
+  width: 100%;
+}
+.display-bar header span {
+  float: right;
+  font-size: 20px;
+  font-weight: 600;
+  margin: 24px 0;
 }
