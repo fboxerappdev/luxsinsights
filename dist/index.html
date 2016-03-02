@@ -20,6 +20,9 @@
 	
 	<script src="js/jquery.min.js"></script>
 
+    <!--char -->
+	<script src="js/Chart.min.js"></script>
+
 	
 	<!-- custom Javascript file -->
 	<script src="js/custom.js"></script>
@@ -29,8 +32,6 @@
   <div class="main-container">
     <div class="left-bar">
       <form>
-
-
         <div class="form-group big">
           <label for="Tenant">Name Tenant</label>
           <input type="text" id="Tenant" value="- Vacant -">
@@ -69,7 +70,7 @@
           <input type="text" id="Province" value="Zuid Holland">
         </div>
         <div class="form-group">
-          <label for="COR">COR</label>
+          <label for="COR">COROP</label>
           <input type="text" id="COR" value="Groot Rijnmond">
         </div>
         <div class="form-group">
@@ -81,14 +82,13 @@
           <input type="text" id="Country" value="The Netherlands">
         </div>
         <div class="form-group">
-          <label for="Constr">Constr</label>
+          <label for="Constr">Construction year</label>
           <input type="text" id="Constr" value="1998">
         </div>
       </form>
-
     </div>
     <div class="display-bar">
-      <div class="container-fluid">
+      <div class="container-fluid padding">
         <header>
           <div class="toggle">
             <svg class="layer_second" xml:space="preserve" viewBox="0 0 20 17" height="17px" width="40px" y="0px" x="0px" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" baseProfile="tiny" version="1.1">
@@ -102,6 +102,38 @@
           <a href="#" class="logo"><img src="images/Luxs_Logo-Plain.png"></a>
           <span>Driemanssteeweg 182 Rotterdam</span>
         </header>
+        <div class="nav-bar">
+          <ul>
+            <li class="active"><a href="#">Overview</a></li>
+            <li><a href="#">Financial Performance</a></li>
+            <li><a href="#">Health</a></li>
+            <li><a href="#">Environmental Sustainability</a></li>
+            <li><a href="#">Safety</a></li>
+            <li><a href="#">Usability</a></li>
+          </ul>
+        </div>
+        <div class="row">
+          <div class="col-md-8">
+            <div class="content-box">
+              <canvas id="myChart" ></canvas>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="right-bar">
+              <h3>Reporting</h3>
+              <ul>
+            <li><a href="#">Fact sheet</a></li>
+            <li><a href="#">Floor plans</a></li>
+            <li><a href="#">Luxs Scorecard</a></li>
+            <li><a href="#">Sustainability Report</a></li>
+            <li><a href="#">BREEAM Report </a></li>
+          </ul>
+          </div>
+          </div>
+        </div>
+        <footer>
+          <p>Version 0.1 <img src="images/Luxs_Logo-Plain.png"><span class="pull-right">Powered by: </span></p>
+        </footer>
       </div>
     </div>
   </div>

@@ -42,11 +42,12 @@ ul{
 .left-bar{
   background: #222752 none repeat scroll 0 0;
   height: 100%;
+  left: 0;
+  overflow: auto;
   padding: 0 19px;
   position: absolute;
   width: 350px;
   z-index: 8;
-  left:0;
   &:extend(.transition);
   &.open{
 	left:-350px;
@@ -87,9 +88,10 @@ ul{
 .display-bar{
   background: #f4f4f4 none repeat scroll 0 0;
   float: left;
-  height: 500px;
+  height: 100%;
+  overflow: auto;
   padding-left: 350px;
-  position: relative;
+  position: absolute;
   width: 100%;
   &:extend(.transition);
   &.open{
@@ -120,25 +122,176 @@ ul{
 	}
   }
 }
-
-
-
-@media (min-width: 0px) {
-	
+.nav-bar{
+  background: #fff none repeat scroll 0 0;
+  border: 1px solid #e7e7e7;
+  display: inline-block;
+  margin-top: 11px;
+  width: 100%;
+  ul{
+	margin: 3px 10px;
+	li{
+	  float: left;
+	  margin: 11px 7px;
+	  a{
+		background: #f1f1f1 none repeat scroll 0 0;
+		border: 1px solid #dcdcdc;
+		border-radius: 9px;
+		color: #000;
+		display: inline-block;
+		font-size: 14px;
+		font-weight: 600;
+		padding: 6px 15px;
+		transition: all 0.3s ease 0s;
+	  }
+	  &.active a, a:hover, a:focus{
+		background: #646464 none repeat scroll 0 0;
+		border: 1px solid transparent;
+		color: #fff;
+	  }
+	}
+  }
 }
+.content-box{
+  background: #fff none repeat scroll 0 0;
+  float: left;
+  margin-top: 25px;
+  padding: 40px 0;
+  width: 100%;
+  canvas{
+	width:100% !important;
+  }
+}
+.right-bar{
+  display: inline-block;
+  font-size: 22px;
+  font-weight: 600;
+  margin: 22px 0 14px;
+  text-align: center;
+  text-transform: uppercase;
+  width: 100%;
+  h3{
+	font-size: 22px;
+	font-weight: 600;
+	margin: 4px 0 14px;
+	text-align: center;
+	text-transform: uppercase;
+  }
+  ul{
+	li{
+	 a{
+		background: #222752 none repeat scroll 0 0;
+		color: #fff;
+		display: inline-block;
+		margin-bottom: 15px;
+		padding: 10px;
+		text-align: center;
+		text-transform: capitalize;
+		width: 100%;
+	  }
+	}
+  }
+}
+.padding{
+  padding: 0 30px;
+}
+footer{
+  background: #fff none repeat scroll 0 0;
+  display: inline-block;
+  margin: 25px 0;
+  padding: 20px;
+  width: 100%;
+  p{
+	display: inline-block;
+	font-size: 15px;
+	width: 100%;
+	img{
+	  float: right;
+	  width: 150px;
+	}
+  }
+}
+
 @media only screen and (min-width: 0px) and (max-width: 767px) {
+  .display-bar {
+	left:263px;
+	padding-left: 0;
+  }
+  .display-bar.open {
+	padding-left: 0;
+	left:0px;
+  }
+
+  .left-bar {
+	width: 270px;
+  }
+  .right-bar ul li a {
+	font-size: 16px;
+	margin-bottom: 5px;
+	padding: 8px 10px;
+  }
+  .display-bar header span {
+	font-size: 15px;
+	margin: 0;
+  }
+  .padding {
+	padding: 0 15px;
+  }
+  .display-bar header .toggle {
+	margin: 20px 10px 20px -28px;
+  }
+  .display-bar header .logo {
+	width: 140px;
+  }
+  .nav-bar ul li a {
+	font-size: 14px;
+	padding: 4px 12px;
+  }
+  .nav-bar ul li {
+	float: left;
+	margin: 7px 4px;
+  }
+  .left-bar .form-group label {
+	margin: 3px 0 7px;
+	width: 100%;
+  }
+  .left-bar .form-group input {
+	width: 100%;
+  }
+  .left-bar .form-group {
+	margin-bottom: 8px;
+  }
+}
+
+@media (min-width: 768px) {
+  .right-bar ul li a {
+	font-size: 14px;
+	margin-bottom: 5px;
+	padding: 8px 10px;
+  }
+  .display-bar header span {
+	font-size: 18px;
+  }
+}
+@media (min-width: 992px) {
 
 }
-@media only screen and (min-width: 0px) and (max-width: 480px) {
-	
+@media (min-width: 1280px) {
+  .right-bar ul li a {
+	font-size:16px;
+	margin-bottom: 10px;
+	padding: 10px;
+  }
+  .display-bar header span {
+	font-size: 20px;
+  }
 }
-@media (min-width: 992px) {	
-	
-}
-@media (min-width: 1200px) {
 
-	
-	
+@media (min-width: 1500px) {
+  .right-bar ul li a {
+	font-size:22px;
+	margin-bottom: 15px;
+  }
 }
 
 
