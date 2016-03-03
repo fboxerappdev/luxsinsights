@@ -66,19 +66,20 @@ ul {
 .left-bar .form-group label {
   color: #fff;
   float: left;
-  font-family: Georgia;
   font-weight: normal;
   width: 40%;
   margin: 3px 0;
 }
 .left-bar .form-group input {
-  color: #000;
-  font-family: Georgia;
-  font-size: 17px;
+  color: #555;
+  font-size: 14px;
   font-weight: 500;
-  height: 26px;
+  height: 28px;
   padding: 0 4px;
   width: 60%;
+}
+.left-bar .form-group input:focus {
+  color: #000;
 }
 .display-bar {
   background: #f4f4f4 none repeat scroll 0 0;
@@ -144,7 +145,7 @@ ul {
 .nav-bar ul li.active a,
 .nav-bar ul li a:hover,
 .nav-bar ul li a:focus {
-  background: #646464 none repeat scroll 0 0;
+  background: #222752 none repeat scroll 0 0;
   border: 1px solid transparent;
   color: #fff;
 }
@@ -154,9 +155,124 @@ ul {
   margin-top: 25px;
   padding: 40px 0;
   width: 100%;
+  position: relative;
 }
 .content-box canvas {
   width: 100% !important;
+}
+.content-box.padding {
+  padding: 16px 20px;
+}
+.content-box h2 {
+  color: #333;
+  font-weight: 600;
+  text-align: center;
+}
+.content-box .table {
+  border-bottom: 1px solid #5a5a5a;
+}
+.content-box .table .popover {
+  background: #FFE721;
+  font-size: 12px;
+  position: absolute;
+  margin-left: -6px;
+}
+.content-box .table .popover .arrow:after {
+  border-right-color: #FFE721;
+}
+.content-box .table thead tr th {
+  color: #6c6c6c;
+  font-weight: 700;
+}
+.content-box .table tbody tr td {
+  border-top: 1px solid #cacaca;
+  color: #000000;
+  font-size: 15px;
+  padding: 6px 5px;
+}
+.content-box .table tbody tr td span {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+.content-box .table tbody tr td span[data-toggle="popover"]:after {
+  border-right: 9px solid transparent;
+  border-top: 8px solid red;
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0;
+  transform: rotate(90deg);
+}
+.content-box .table tbody tr.b1dl {
+  background: #f2f2f2 none repeat scroll 0 0;
+}
+.content-box .table tbody tr.b1dl th {
+  border-bottom: 1px solid #aaafaf;
+  border-top: 1px solid #aaafaf;
+}
+.content-box .table tbody tr.inner-row td {
+  font-size: 13px;
+  padding-left: 4px 15px;
+}
+.content-box .table tbody tr.inner-row td:first-child {
+  padding-left: 15px;
+}
+.content-box .table tbody tr:first-child th {
+  font-size: 21px;
+  font-weight: 600;
+  padding: 10px 5px;
+}
+.content-box .table tbody tr:first-child th sup {
+  font-weight: 400;
+  margin-left: 7px;
+}
+.table-responsive {
+  overflow-x: auto;
+  min-height: 0.01%;
+}
+.table-responsive {
+  width: 100%;
+  margin-bottom: 15px;
+  overflow-y: hidden;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+  border: 1px solid #ddd;
+}
+.table-responsive > .table {
+  margin-bottom: 0;
+}
+.table-responsive > .table > thead > tr > th,
+.table-responsive > .table > tbody > tr > th,
+.table-responsive > .table > tfoot > tr > th,
+.table-responsive > .table > thead > tr > td,
+.table-responsive > .table > tbody > tr > td,
+.table-responsive > .table > tfoot > tr > td {
+  white-space: nowrap;
+}
+.table-responsive > .table-bordered {
+  border: 0;
+}
+.table-responsive > .table-bordered > thead > tr > th:first-child,
+.table-responsive > .table-bordered > tbody > tr > th:first-child,
+.table-responsive > .table-bordered > tfoot > tr > th:first-child,
+.table-responsive > .table-bordered > thead > tr > td:first-child,
+.table-responsive > .table-bordered > tbody > tr > td:first-child,
+.table-responsive > .table-bordered > tfoot > tr > td:first-child {
+  border-left: 0;
+}
+.table-responsive > .table-bordered > thead > tr > th:last-child,
+.table-responsive > .table-bordered > tbody > tr > th:last-child,
+.table-responsive > .table-bordered > tfoot > tr > th:last-child,
+.table-responsive > .table-bordered > thead > tr > td:last-child,
+.table-responsive > .table-bordered > tbody > tr > td:last-child,
+.table-responsive > .table-bordered > tfoot > tr > td:last-child {
+  border-right: 0;
+}
+.table-responsive > .table-bordered > tbody > tr:last-child > th,
+.table-responsive > .table-bordered > tfoot > tr:last-child > th,
+.table-responsive > .table-bordered > tbody > tr:last-child > td,
+.table-responsive > .table-bordered > tfoot > tr:last-child > td {
+  border-bottom: 0;
 }
 .right-bar {
   display: inline-block;
@@ -166,6 +282,25 @@ ul {
   text-align: center;
   text-transform: uppercase;
   width: 100%;
+}
+.right-bar canvas {
+  width: 60% !important;
+}
+.right-bar .canvas-box {
+  position: relative;
+}
+.right-bar .canvas-box > span {
+  font-size: 28px;
+  left: 45%;
+  position: absolute;
+  top: 44%;
+}
+.right-bar p {
+  font-size: 13px;
+  font-weight: 600;
+  margin-top: 20px;
+  text-align: left;
+  text-transform: capitalize;
 }
 .right-bar h3 {
   font-size: 22px;
@@ -271,10 +406,30 @@ footer p img {
   .display-bar header span {
     font-size: 20px;
   }
+  .content-box h2 {
+    font-size: 22px;
+  }
+  .right-bar canvas {
+    width: 90% !important;
+  }
+  .right-bar .canvas-box > span {
+    left: 42%;
+    top: 42%;
+  }
 }
 @media (min-width: 1500px) {
   .right-bar ul li a {
     font-size: 22px;
     margin-bottom: 15px;
+  }
+  .content-box h2 {
+    font-size: 30px;
+  }
+  .right-bar canvas {
+    width: 60% !important;
+  }
+  .right-bar .canvas-box > span {
+    left: 45%;
+    top: 45%;
   }
 }

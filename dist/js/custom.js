@@ -4,25 +4,27 @@
 
 
 
-$(document).ready(function(){
+$(document).ready(function() {
 
 
-         var winwid= $(document).width();
+    $('[data-toggle="popover"]').popover();
 
-        if(winwid>768){
-             $(".toggle").click(function(){
-              $(".left-bar,.display-bar").toggleClass("open");
-             });
-        }
 
-        if(winwid<768){
+    var winwid = $(document).width();
+
+    if (winwid > 768) {
+        $(".toggle").click(function () {
             $(".left-bar,.display-bar").toggleClass("open");
+        });
+    }
 
-            $(".toggle").click(function(){
-                $(".left-bar,.display-bar").toggleClass("open");
-            });
-        }
+    if (winwid < 768) {
+        $(".left-bar,.display-bar").toggleClass("open");
 
+        $(".toggle").click(function () {
+            $(".left-bar,.display-bar").toggleClass("open");
+        });
+    }
 
 
     var data = {
@@ -31,8 +33,7 @@ $(document).ready(function(){
             {
                 label: "My Second dataset",
                 fillColor: "rgba(34,39,82,0.9)",
-                strokeColor: "rgba(151,187,205,1)",
-                pointColor: "rgba(151,187,205,1)",
+                strokeColor: "rgba(151,187,205,0)",
                 pointStrokeColor: "#fff",
                 pointHighlightFill: "#fff",
                 pointHighlightStroke: "rgba(151,187,205,1)",
@@ -41,16 +42,44 @@ $(document).ready(function(){
         ]
     };
 
-    var ctx = $("#myChart").get(0).getContext("2d");
-    // This will get the first returned node in the jQuery collection.
+    var data1 = [
+        {
+            value: 8,
+            color: "#222752",
+        },
+        {
+            value: 100,
+            color: "#aaa",
+        }
+    ];
+    function chart(){
+        if($("#myChart").length){
+            var ctx = $("#myChart").get(0).getContext("2d");
+            var myRadarChart = new Chart(ctx).Radar(data, {
+                pointDot : false,
+                angleLineColor : "rgba(0,0,0,0)",
+                scaleLineColor: "rgba(0,0,0,0.26)"
+            });
+        }
+        if($("#myChart1").length){
 
+            var ctx1 = $("#myChart1").get(0).getContext("2d");
+            var myDoughnutChart = new Chart(ctx1).Doughnut(data1, {
+                scaleLineWidth: 1,
+                percentageInnerCutout : 50,
+                showTooltips: false
+            });
 
+            $("#myChart1").after("<span>"+ data1[0].value +"<sup>/"+ data1[1].value +"</sup></span>");
 
-    var myRadarChart = new Chart(ctx).Radar(data, {
-        pointDot : false
+        }
+    }
+    chart();
+    $(".toggle").click(function(){
+        setTimeout(function(){
+            chart();
+        }, 300);
+
     });
-
-
-
 
 });
