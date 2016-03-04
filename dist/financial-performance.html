@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Porject</title>
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+	<!-- fonts -->
+    <link href="css/fonts.css" rel="stylesheet">
+	
+	<!-- font awesome -->
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+
+	<!-- custom -->
+    <link href="css/style.css" rel="stylesheet">
+	
+	
+	<script src="js/jquery.min.js"></script>
+
+    <!--char -->
+	<script src="js/Chart.min.js"></script>
+
+	
+	<!-- custom Javascript file -->
+	<script src="js/custom.js"></script>
+	
+  </head>
+  <body>
+  <div class="main-container">
+    <div class="left-bar">
+      <form>
+        <div class="form-group big">
+          <label>Name Tenant</label>
+          <select>
+            <option>- Vacant -</option>
+            <option>- Vacant -</option>
+            <option>- Vacant -</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="SBI">SBI code</label>
+          <input type="text" id="SBI" value="">
+        </div>
+        <div class="form-group">
+          <label for="Address">Address</label>
+          <input type="text" id="Address" value="Driemanssteeweg 182">
+        </div>
+        <div class="form-group">
+          <label for="PC">PC & City</label>
+          <input type="text" id="PC" value="3084CB Rotterdam">
+        </div>
+        <div class="form-group">
+          <label for="Portfolio">Portfolio</label>
+          <input type="text" id="Portfolio" value="The Netherlands">
+        </div>
+        <div class="form-group">
+          <label for="Neighbourhood">Neighbourhood</label>
+          <input type="text" id="Neighbourhood" value="Charlois Zuidrand">
+        </div>
+        <div class="form-group">
+          <label for="District">District</label>
+          <input type="text" id="District" value="Wijk 15 Charlois">
+        </div>
+        <div class="form-group">
+          <label for="Municipality">Municipality</label>
+          <input type="text" id="Municipality" value="Rotterdam">
+        </div>
+        <div class="form-group">
+          <label for="Province">Province</label>
+          <input type="text" id="Province" value="Zuid Holland">
+        </div>
+        <div class="form-group">
+          <label for="COR">COROP</label>
+          <input type="text" id="COR" value="Groot Rijnmond">
+        </div>
+        <div class="form-group">
+          <label for="Region">Region</label>
+          <input type="text" id="Region" value="West nederland">
+        </div>
+        <div class="form-group">
+          <label for="Country">Country</label>
+          <input type="text" id="Country" value="The Netherlands">
+        </div>
+        <div class="form-group">
+          <label for="Constr">Construction year</label>
+          <input type="text" id="Constr" value="1998">
+        </div>
+      </form>
+    </div>
+    <div class="display-bar">
+      <div class="container-fluid padding">
+        <header>
+          <div class="toggle">
+            <svg class="layer_second" xml:space="preserve" viewBox="0 0 20 17" height="17px" width="40px" y="0px" x="0px" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" baseProfile="tiny" version="1.1">
+              <g>
+                <rect id="menu_one" height="2" width="40" fill="#333"></rect>
+                <rect id="menu_two" height="2" width="40" fill="#333" y="7.016"></rect>
+                <rect id="menu_three" height="2" width="40" fill="#333" y="14.031"></rect>
+              </g>
+            </svg>
+          </div>
+          <a href="#" class="logo"><img src="images/logo.jpg"></a>
+          <span>Driemanssteeweg 182 Rotterdam</span>
+        </header>
+        <div class="nav-bar">
+          <ul>
+            <li><a href="index.html">Overview</a></li>
+            <li class="active"><a href="financial-performance.html">Financial Performance</a></li>
+            <li><a href="#">Health</a></li>
+            <li><a href="#">Environmental Sustainability</a></li>
+            <li><a href="#">Safety</a></li>
+            <li><a href="#">Usability</a></li>
+          </ul>
+        </div>
+        <div class="row">
+          <div class="col-md-9 col-sm-8 col-xs-12">
+            <div class="content-box padding">
+              <div class="table-responsive">
+                <table class="table" id="show-data">
+                  <thead>
+                    <tr>
+                      <th><i></i>Building Performance</th>
+                      <td></td>
+                      <th>0<sup>/100</sup></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Occupation(in%)</td>
+                      <td>0%</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td>Service income</td>
+                      <td>Unknown</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td>Total service costs</td>
+                      <td>Unknown</td>
+                      <td></td>
+                    </tr>
+                    <tr class="inner-row">
+                      <td>Energy costs</td>
+                      <td>Unknown</td>
+                      <td></td>
+                    </tr>
+                    <tr class="inner-row">
+                      <td>Water costs</td>
+                      <td>Unknown</td>
+                      <td></td>
+                    </tr>
+                    <tr class="inner-row">
+                      <td>Heat costs</td>
+                      <td>Unknown</td>
+                      <td></td>
+                    </tr>
+                    <tr class="inner-row">
+                      <td>Communication costs</td>
+                      <td>Unknown</td>
+                      <td></td>
+                    </tr>
+                    <tr class="inner-row">
+                      <td>W-installation costs</td>
+                      <td>Unknown</td>
+                      <td></td>
+                    </tr>
+                    <tr class="inner-row">
+                      <td>Internet costs</td>
+                      <td>Unknown</td>
+                      <td></td>
+                    </tr>
+                    <tr class="inner-row">
+                      <td>Transport installation costs</td>
+                      <td>Unknown</td>
+                      <td></td>
+                    </tr>
+                    <tr class="inner-row">
+                      <td>Building related costs</td>
+                      <td>Unknown</td>
+                      <td></td>
+                    </tr>
+                    <tr class="inner-row">
+                      <td>Reception costs</td>
+                      <td>Unknown</td>
+                      <td></td>
+                    </tr>
+                    <tr class="inner-row">
+                      <td>Reception costs</td>
+                      <td>Unknown</td>
+                      <td></td>
+                    </tr>
+                    <tr class="inner-row">
+                      <td>Alarm costs / security costs</td>
+                      <td>Unknown</td>
+                      <td></td>
+                    </tr>
+                    <tr class="inner-row">
+                      <td>Cleaning costs</td>
+                      <td>Unknown</td>
+                      <td></td>
+                    </tr>
+                    <tr class="inner-row">
+                      <td>Landscaping cost</td>
+                      <td>Unknown</td>
+                      <td></td>
+                    </tr>
+                    <tr class="inner-row">
+                      <td>Waste disposal costs</td>
+                      <td>Unknown</td>
+                      <td></td>
+                    </tr>
+                    <tr class="inner-row">
+                      <td>Other fixed costs</td>
+                      <td>Unknown</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td>Service Costs per square meter</td>
+                      <td>Unknown</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td><span data-toggle="popover" data-trigger="hover" data-content="Net service income is the difference between the service costs paid by the tennant and the true service costs paid by the owner.">Net service income</span></td>
+                      <td>Unknown</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td>Total maintenance costs</td>
+                      <td>Unknown</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td><span data-toggle="popover" data-trigger="hover" data-content="Maintenance cost per square meter determines whether the unit has relaively high costs compared to other units.">Maintenance costs per square meter</span></td>
+                      <td>Unknown</td>
+                      <td></td>
+
+                    </tr>
+                  </tbody>
+                  <thead>
+                    <tr>
+                      <th><i></i>Tennant performance</th>
+                      <td></td>
+                      <th>0<sup>/100</sup></th>
+                    </tr>
+                  </thead>
+                   <tbody>
+                    <tr>
+                      <td>Rent</td>
+                      <td>€-</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td><span data-toggle="popover" data-trigger="hover" data-content="The rent per square meter determines whether the unit is a relatively high-value unit.">Rent per square meter</span></td>
+                      <td>€-</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td><span data-toggle="popover" data-trigger="hover" data-content="Yield determines the profitability of the unit.">Yield (in %)</span></td>
+                      <td>0%</td>
+                      <td></td>
+                    </tr>
+                  </tbody>
+                  <thead>
+                    <tr>
+                      <th><i></i>Building value</th>
+                      <td></td>
+                      <th>0<sup>/100</sup></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><span data-toggle="popover" data-trigger="hover" data-content="WOZ value is the value of the building that is taxed by the government.">WOZ-value</span></td>
+                      <td>Unknown</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td><span data-toggle="popover" data-trigger="hover" data-content="Increasing WOZ values oould be an indication of an increasing building value">Change in WOZ-value (in %)</span></td>
+                      <td>Unknown</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td>Building market value</td>
+                      <td>Unknown</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td>Year of purchase</td>
+                      <td>Unknown</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td>Purchasing price</td>
+                      <td>Unknown</td>
+                      <td></td>
+                    </tr>
+                  </tbody>
+                  <thead>
+                    <tr>
+                      <th><i></i>Macro-economic performance</th>
+                      <td></td>
+                      <th>75<sup>/100</sup></th>
+                    </tr>
+                  </thead>
+                   <tbody>
+                    <tr>
+                      <td><span data-toggle="popover" data-trigger="hover" data-content="Kris Spitsbaard: Change in GDP with respect to the previous year.  Last used data is from 2014.">Change in GDP (in %)</span></td>
+                      <td>3.10%</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td>Change in employment (in %)</td>
+                      <td>2.60%</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td>Change in consumer prices (in %)</td>
+                      <td>1.80%</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td>Change in consumption (in %)</td>
+                      <td>1.20%</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td><span data-toggle="popover" data-trigger="hover" data-content="Change in the number of bankrupcties with respect to the same period last year.">Change in the number of bankrupcties in COROP area (in %)</span></td>
+                      <td>-34%</td>
+                      <td></td>
+                    </tr>
+                  </tbody>
+                  <thead>
+                    <tr class="b1dl">
+                      <th><i></i>Financial performance</th>
+                      <td></td>
+                      <th>8<sup>/100</sup></th>
+                    </tr>
+                  </thead>
+                </table>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-4 col-xs-12">
+            <div class="right-bar">
+              <div class="canvas-box">
+                <canvas id="myChart1" width="400" height="400"></canvas>
+              </div>
+              <p>'Financial performance' evaluates teh financials of the building ('building performance' and 'Building value') and teh tennant ('Tennant performance').In addition, given teh impact the local economy can have on tennants and value of the building, the performance of the local economy is taken into account ('Marcoeconomic performance') </p>
+
+            </div>
+          </div>
+        </div>
+        <footer>
+          <p>Version 0.1 <img src="images/Luxs_Logo-Plain.png"><span class="pull-right">Powered by: </span></p>
+        </footer>
+      </div>
+    </div>
+  </div>
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>

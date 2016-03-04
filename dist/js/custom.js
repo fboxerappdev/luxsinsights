@@ -12,19 +12,10 @@ $(document).ready(function() {
 
     var winwid = $(document).width();
 
-    if (winwid > 768) {
-        $(".toggle").click(function () {
-            $(".left-bar,.display-bar").toggleClass("open");
-        });
-    }
 
-    if (winwid < 768) {
+    $(".toggle").click(function () {
         $(".left-bar,.display-bar").toggleClass("open");
-
-        $(".toggle").click(function () {
-            $(".left-bar,.display-bar").toggleClass("open");
-        });
-    }
+    });
 
 
     var data = {
@@ -52,6 +43,40 @@ $(document).ready(function() {
             color: "#aaa",
         }
     ];
+    var data2 = [
+        {
+            value: 100,
+            color:"#F7464A",
+            highlight: "#FF5A5E",
+            label: "Financial Performance"
+        },
+        {
+            value: 20,
+            color: "#46BFBD",
+            highlight: "#5AD3D1",
+            label: "Health"
+        },
+        {
+            value: 60,
+            color: "#FDB45C",
+            highlight: "#FFC870",
+            label: "Environmental Sustainability"
+        },
+        {
+            value: 30,
+            color: "#949FB1",
+            highlight: "#A8B3C5",
+            label: "Safety"
+        },
+        {
+            value: 70,
+            color: "#4D5360",
+            highlight: "#616774",
+            label: "Usability"
+        }
+
+    ];
+
     function chart(){
         if($("#myChart").length){
             var ctx = $("#myChart").get(0).getContext("2d");
@@ -61,6 +86,17 @@ $(document).ready(function() {
                 scaleLineColor: "rgba(0,0,0,0.26)"
             });
         }
+
+        if($("#myChart2").length){
+            var ctx = $("#myChart2").get(0).getContext("2d");
+            var myRadarChart = new Chart(ctx).PolarArea(data2, {
+                pointDot : false,
+                angleLineColor : "rgba(0,0,0,0)",
+                scaleLineColor: "rgba(0,0,0,0.15)"
+            });
+
+        }
+
         if($("#myChart1").length){
 
             var ctx1 = $("#myChart1").get(0).getContext("2d");
@@ -69,7 +105,6 @@ $(document).ready(function() {
                 percentageInnerCutout : 50,
                 showTooltips: false
             });
-
             $("#myChart1").after("<span>"+ data1[0].value +"<sup>/"+ data1[1].value +"</sup></span>");
 
         }
@@ -81,5 +116,14 @@ $(document).ready(function() {
         }, 300);
 
     });
+
+
+    if($("#show-data").length){
+        $("#show-data>thead").click(function(){
+           $(this).next().toggle();
+           $(this).find("i").toggleClass("open");
+
+        });
+    }
 
 });

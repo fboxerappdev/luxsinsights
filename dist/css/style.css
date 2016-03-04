@@ -14,7 +14,7 @@ body {
   margin: 0;
   padding: 0;
   outline: none;
-  font-family: Open Sans;
+  font-family: calibri;
 }
 a {
   color: #333;
@@ -38,7 +38,7 @@ ul {
 .left-bar {
   background: #222752 none repeat scroll 0 0;
   height: 100%;
-  left: 0;
+  left: -350px;
   overflow: auto;
   padding: 0 19px;
   position: absolute;
@@ -46,7 +46,7 @@ ul {
   z-index: 8;
 }
 .left-bar.open {
-  left: -350px;
+  left: 0;
 }
 .left-bar form {
   padding: 30px 0;
@@ -60,7 +60,8 @@ ul {
 .left-bar .form-group.big label {
   font-size: 17px;
 }
-.left-bar .form-group.big input {
+.left-bar .form-group.big input,
+.left-bar .form-group.big select {
   font-weight: bold;
 }
 .left-bar .form-group label {
@@ -70,7 +71,8 @@ ul {
   width: 40%;
   margin: 3px 0;
 }
-.left-bar .form-group input {
+.left-bar .form-group input,
+.left-bar .form-group select {
   color: #555;
   font-size: 14px;
   font-weight: 500;
@@ -78,20 +80,21 @@ ul {
   padding: 0 4px;
   width: 60%;
 }
-.left-bar .form-group input:focus {
+.left-bar .form-group input:focus,
+.left-bar .form-group select:focus {
   color: #000;
 }
 .display-bar {
-  background: #f4f4f4 none repeat scroll 0 0;
+  background: #fff none repeat scroll 0 0;
   float: left;
   height: 100%;
   overflow: auto;
-  padding-left: 350px;
+  padding-left: 0;
   position: absolute;
   width: 100%;
 }
 .display-bar.open {
-  padding-left: 0;
+  padding-left: 350px;
 }
 .display-bar header {
   display: inline-block;
@@ -106,20 +109,21 @@ ul {
 }
 .display-bar header .logo {
   display: inline-block;
-  width: 150px;
+  width: 240px;
 }
 .display-bar header .logo img {
   width: 100%;
 }
 .display-bar header span {
   float: right;
-  font-size: 20px;
+  font-size: 17px;
   font-weight: 600;
   margin: 24px 0;
 }
 .nav-bar {
   background: #fff none repeat scroll 0 0;
   border: 1px solid #e7e7e7;
+  box-shadow: 0 0 8px #e8e8e8;
   display: inline-block;
   margin-top: 11px;
   width: 100%;
@@ -161,7 +165,7 @@ ul {
   width: 100% !important;
 }
 .content-box.padding {
-  padding: 16px 20px;
+  padding: 0;
 }
 .content-box h2 {
   color: #333;
@@ -169,25 +173,57 @@ ul {
   text-align: center;
 }
 .content-box .table {
-  border-bottom: 1px solid #5a5a5a;
+  border-bottom: 2px solid #fff;
 }
 .content-box .table .popover {
   background: #FFE721;
   font-size: 12px;
   position: absolute;
-  margin-left: -6px;
+  margin-left: 10px;
+  margin-top: -10px;
 }
 .content-box .table .popover .arrow:after {
   border-right-color: #FFE721;
 }
 .content-box .table thead tr th {
-  color: #6c6c6c;
-  font-weight: 700;
+  font-size: 24px;
+  font-weight: 600;
+  padding: 10px 5px;
+  cursor: pointer;
+}
+.content-box .table thead tr th sup {
+  font-weight: 400;
+  margin-left: 7px;
+}
+.content-box .table thead tr th i {
+  background: transparent url("../images/right-arrow.png") no-repeat scroll 0 0;
+  display: inline-block;
+  height: 14px;
+  margin-right: 4px;
+  transform: translate(-3px, 0px);
+  width: 14px;
+  background-size: 100% auto;
+}
+.content-box .table thead tr th i.open {
+  transform: translate(-3px, 0px) rotate(90deg);
+}
+.content-box .table thead tr.b1dl {
+  background: #f2f2f2 none repeat scroll 0 0;
+}
+.content-box .table thead tr.b1dl th {
+  border-bottom: 1px solid #aaafaf;
+  border-top: 1px solid #aaafaf;
+}
+.content-box .table thead tr.b1dl th i {
+  background: none;
+}
+.content-box .table tbody {
+  display: none;
 }
 .content-box .table tbody tr td {
   border-top: 1px solid #cacaca;
   color: #000000;
-  font-size: 15px;
+  font-size: 16px;
   padding: 6px 5px;
 }
 .content-box .table tbody tr td span {
@@ -195,37 +231,12 @@ ul {
   display: inline-block;
   width: 100%;
 }
-.content-box .table tbody tr td span[data-toggle="popover"]:after {
-  border-right: 9px solid transparent;
-  border-top: 8px solid red;
-  content: "";
-  position: absolute;
-  right: 0;
-  top: 0;
-  transform: rotate(90deg);
-}
-.content-box .table tbody tr.b1dl {
-  background: #f2f2f2 none repeat scroll 0 0;
-}
-.content-box .table tbody tr.b1dl th {
-  border-bottom: 1px solid #aaafaf;
-  border-top: 1px solid #aaafaf;
-}
 .content-box .table tbody tr.inner-row td {
-  font-size: 13px;
+  font-size: 15px;
   padding-left: 4px 15px;
 }
 .content-box .table tbody tr.inner-row td:first-child {
   padding-left: 15px;
-}
-.content-box .table tbody tr:first-child th {
-  font-size: 21px;
-  font-weight: 600;
-  padding: 10px 5px;
-}
-.content-box .table tbody tr:first-child th sup {
-  font-weight: 400;
-  margin-left: 7px;
 }
 .table-responsive {
   overflow-x: auto;
@@ -236,7 +247,6 @@ ul {
   margin-bottom: 15px;
   overflow-y: hidden;
   -ms-overflow-style: -ms-autohiding-scrollbar;
-  border: 1px solid #ddd;
 }
 .table-responsive > .table {
   margin-bottom: 0;
@@ -324,6 +334,7 @@ ul {
 }
 footer {
   background: #fff none repeat scroll 0 0;
+  box-shadow: 0 0 4px #aaaaaa;
   display: inline-block;
   margin: 25px 0;
   padding: 20px;
@@ -336,16 +347,11 @@ footer p {
 }
 footer p img {
   float: right;
-  width: 150px;
+  width: 120px;
 }
 @media only screen and (min-width: 0px) and (max-width: 767px) {
-  .display-bar {
-    left: 263px;
-    padding-left: 0;
-  }
   .display-bar.open {
-    padding-left: 0;
-    left: 0px;
+    padding-left: 270px;
   }
   .left-bar {
     width: 270px;
@@ -366,7 +372,7 @@ footer p img {
     margin: 20px 10px 20px -28px;
   }
   .display-bar header .logo {
-    width: 140px;
+    width: 190px;
   }
   .nav-bar ul li a {
     font-size: 14px;
@@ -394,7 +400,10 @@ footer p img {
     padding: 8px 10px;
   }
   .display-bar header span {
-    font-size: 18px;
+    font-size: 15px;
+  }
+  .right-bar canvas {
+    width: 90% !important;
   }
 }
 @media (min-width: 1280px) {
@@ -404,7 +413,7 @@ footer p img {
     padding: 10px;
   }
   .display-bar header span {
-    font-size: 20px;
+    font-size: 17px;
   }
   .content-box h2 {
     font-size: 22px;
