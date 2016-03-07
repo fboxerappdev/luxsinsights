@@ -33,6 +33,8 @@ $(document).ready(function() {
         ]
     };
 
+
+
     var data1 = [
         {
             value: 8,
