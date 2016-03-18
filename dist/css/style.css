@@ -235,10 +235,17 @@ ul {
 }
 .content-box .table tbody tr.inner-row td {
   font-size: 15px;
-  padding-left: 4px 15px;
+  padding: 6px 5px;
 }
 .content-box .table tbody tr.inner-row td:first-child {
   padding-left: 15px;
+}
+.content-box .table tbody tr.inner-row-2 td {
+  font-size: 14px;
+  padding: 6px 5px;
+}
+.content-box .table tbody tr.inner-row-2 td:first-child {
+  padding-left: 25px;
 }
 .polararea-legend {
   float: left;
