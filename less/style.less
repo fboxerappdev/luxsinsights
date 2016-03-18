@@ -57,6 +57,7 @@ ul{
   form{
 	padding: 30px 0;
   }
+
   .form-group{
 	margin-bottom: 15px;
 	&.big{
@@ -127,35 +128,36 @@ ul{
 }
 .nav-bar{
   background: #fff none repeat scroll 0 0;
-  border: 1px solid #e7e7e7;
-  box-shadow: 0 0 8px #e8e8e8;
   display: inline-block;
   margin-top: 11px;
   width: 100%;
   ul{
-	margin: 3px 10px;
+	margin: 10px 0;
 	li{
 	  float: left;
-	  margin: 11px 7px;
+	  margin-right: 14px;
 	  a{
 		background: #f1f1f1 none repeat scroll 0 0;
-		border: 1px solid #dcdcdc;
 		border-radius: 9px;
 		color: #000;
 		display: inline-block;
 		font-size: 14px;
 		font-weight: 600;
-		padding: 6px 15px;
+		padding: 7px 16px;
 		transition: all 0.3s ease 0s;
 	  }
 	  &.active a, a:hover, a:focus{
 		background: #222752 none repeat scroll 0 0;
-		border: 1px solid transparent;
 		color: #fff;
 	  }
 	}
   }
 }
+.table > thead > tr > th {
+  border-bottom: 1px solid #808080;
+}
+
+
 .content-box{
   background: #fff none repeat scroll 0 0;
   float: left;
@@ -164,7 +166,9 @@ ul{
   width: 100%;
   position:relative;
   canvas{
-	width:100% !important;
+	display: table;
+	margin: 0 auto;
+	width: 900px !important;
   }
   &.padding{
 	padding: 0;
@@ -176,7 +180,8 @@ ul{
   }
 
   .table{
-	border-bottom: 2px solid #fff;
+	margin-bottom: -1px !important;
+	margin-top: -1px;
 	.popover{
 	  background:#FFE721;
 	  font-size:12px;
@@ -228,7 +233,7 @@ ul{
 	  display: none;
 	  tr{
 		td{
-		  border-top: 1px solid #cacaca;
+		  border-top: 1px dotted #b9b9b9;
 		  color: #000000;
 		  font-size: 16px;
 		  padding: 6px 5px;
@@ -238,7 +243,6 @@ ul{
 			width:100%;
 		  }
 		}
-
 	  }
 	  tr.inner-row{
 		td{
@@ -248,17 +252,36 @@ ul{
 		td:first-child{
 		  padding-left:15px;
 		}
-
 	  }
-
+	}
+  }
+}
+.polararea-legend{
+  float: left;
+  margin: 22px 0;
+  position: relative;
+  width: 100%;
+  text-align:center;
+  li{
+	color: #7f7f7f;
+	display: inline-block;
+	font-size: 14px;
+	margin-bottom: 3px;
+	margin-right: 8px;
+	padding: 3px;
+	span{
+	  float: left;
+	  height: 18px;
+	  margin-right: 6px;
+	  width: 18px;
 	}
   }
 }
 .table-responsive {
   overflow-x: auto;
   min-height: 0.01%;
-}
-.table-responsive {
+  border-bottom: 1px solid #808080;
+  border-top: 1px solid #808080;
   width: 100%;
   margin-bottom: 15px;
   overflow-y: hidden;
@@ -302,6 +325,7 @@ ul{
   border-bottom: 0;
 }
 .right-bar{
+
   display: inline-block;
   font-size: 22px;
   font-weight: 600;
@@ -312,13 +336,20 @@ ul{
   canvas{
 	width:60% !important;
   }
+  h4{
+	margin-bottom: 18px;
+	text-transform: capitalize;
+  }
   .canvas-box{
 	position:relative;
 	&>span{
+	  display: inline-block;
 	  font-size: 28px;
-	  left: 45%;
+	  left: 0;
 	  position: absolute;
-	  top: 44%;
+	  text-align: center;
+	  top: 41%;
+	  width: 100%;
 	}
   }
   p{
@@ -326,7 +357,7 @@ ul{
 	font-weight: 600;
 	margin-top: 20px;
 	text-align: left;
-	text-transform: capitalize;
+	text-transform: initial;
   }
 
   h3{
@@ -351,12 +382,11 @@ ul{
 	}
   }
 }
+
 .padding{
   padding: 0 30px;
 }
 footer{
-  background: #fff none repeat scroll 0 0;
-  box-shadow: 0 0 4px #aaaaaa;
   display: inline-block;
   margin: 25px 0;
   padding: 20px;
@@ -417,6 +447,13 @@ footer{
   .left-bar .form-group {
 	margin-bottom: 8px;
   }
+  .chart-info {
+	bottom: -10px;
+	position: relative;
+  }
+  .content-box canvas {
+		width: 100% !important;
+	}
 }
 
 @media (min-width: 768px) {
@@ -429,11 +466,19 @@ footer{
 	font-size: 15px;
   }
   .right-bar canvas {
-	width: 90% !important;
+	width: 70% !important;
   }
+  .right-bar .canvas-box > span {
+	font-size: 22px;
+  }
+  .content-box canvas {
+		width: 700px !important;
+	}
 }
 @media (min-width: 992px) {
-
+	.content-box canvas {
+		width: 500px !important;
+	}
 }
 @media (min-width: 1280px) {
   .right-bar ul li a {
@@ -448,12 +493,14 @@ footer{
 	font-size: 22px;
   }
   .right-bar canvas {
-	width: 90% !important;
+	width: 70% !important;
   }
   .right-bar .canvas-box > span {
-	left: 42%;
-	top: 42%;
+	font-size: 22px;
   }
+	.content-box canvas {
+		width: 600px !important;
+	}
 }
 
 @media (min-width: 1500px) {
@@ -464,13 +511,15 @@ footer{
   .content-box h2 {
 	font-size: 30px;
   }
+  .right-bar .canvas-box > span {
+	font-size: 28px;
+  }
   .right-bar canvas {
 	width: 60% !important;
   }
-  .right-bar .canvas-box > span {
-	left: 45%;
-	top: 45%;
-  }
+  .content-box canvas {
+		width: 900px !important;
+	}
 }
 
 

@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Porject</title>
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+	<!-- fonts -->
+    <link href="css/fonts.css" rel="stylesheet">
+
+	<!-- font awesome -->
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+
+	<!-- custom -->
+    <link href="css/style.css" rel="stylesheet">
+
+	<script src="js/jquery.min.js"></script>
+
+    <!--char -->
+	<script src="js/Chart.min.js"></script>
+
+	<!-- custom Javascript file -->
+	<script src="js/custom.js"></script>
+	
+  </head>
+  <body>
+  <div class="main-container">
+    <div class="left-bar">
+      <form>
+        <div class="form-group big">
+          <label>Name Tenant</label>
+          <select>
+            <option>- Vacant -</option>
+            <option>- Vacant -</option>
+            <option>- Vacant -</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="SBI">SBI code</label>
+          <input type="text" id="SBI" value="">
+        </div>
+        <div class="form-group">
+          <label for="Address">Address</label>
+          <input type="text" id="Address" value="Driemanssteeweg 182">
+        </div>
+        <div class="form-group">
+          <label for="PC">PC & City</label>
+          <input type="text" id="PC" value="3084CB Rotterdam">
+        </div>
+        <div class="form-group">
+          <label for="Portfolio">Portfolio</label>
+          <input type="text" id="Portfolio" value="The Netherlands">
+        </div>
+        <div class="form-group">
+          <label for="Neighbourhood">Neighbourhood</label>
+          <input type="text" id="Neighbourhood" value="Charlois Zuidrand">
+        </div>
+        <div class="form-group">
+          <label for="District">District</label>
+          <input type="text" id="District" value="Wijk 15 Charlois">
+        </div>
+        <div class="form-group">
+          <label for="Municipality">Municipality</label>
+          <input type="text" id="Municipality" value="Rotterdam">
+        </div>
+        <div class="form-group">
+          <label for="Province">Province</label>
+          <input type="text" id="Province" value="Zuid Holland">
+        </div>
+        <div class="form-group">
+          <label for="COR">COROP</label>
+          <input type="text" id="COR" value="Groot Rijnmond">
+        </div>
+        <div class="form-group">
+          <label for="Region">Region</label>
+          <input type="text" id="Region" value="West nederland">
+        </div>
+        <div class="form-group">
+          <label for="Country">Country</label>
+          <input type="text" id="Country" value="The Netherlands">
+        </div>
+        <div class="form-group">
+          <label for="Constr">Construction year</label>
+          <input type="text" id="Constr" value="1998">
+        </div>
+      </form>
+    </div>
+    <div class="display-bar">
+      <div class="container-fluid padding">
+        <header>
+          <div class="toggle">
+            <svg class="layer_second" xml:space="preserve" viewBox="0 0 20 17" height="17px" width="40px" y="0px" x="0px" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" baseProfile="tiny" version="1.1">
+              <g>
+                <rect id="menu_one" height="2" width="40" fill="#333"></rect>
+                <rect id="menu_two" height="2" width="40" fill="#333" y="7.016"></rect>
+                <rect id="menu_three" height="2" width="40" fill="#333" y="14.031"></rect>
+              </g>
+            </svg>
+          </div>
+          <a href="#" class="logo"><img src="images/logo.jpg"></a>
+
+          <span>Driemanssteeweg 182 Rotterdam</span>
+        </header>
+        <div class="nav-bar">
+          <ul>
+            <li><a href="index.html">Overview</a></li>
+            <li><a href="financial-performance.html">Financial Performance</a></li>
+            <li class="active"><a href="health.html">Health</a></li>
+            <li><a href="#">Environmental Sustainability</a></li>
+            <li><a href="#">Safety</a></li>
+            <li><a href="#">Usability</a></li>
+          </ul>
+        </div>
+        <div class="row">
+          <div class="col-md-9 col-sm-8 col-xs-12">
+            <div class="content-box padding">
+              <div class="table-responsive">
+                <table class="table" id="show-data">
+                  <thead>
+                    <tr>
+                      <th><i></i>Internal environment</th>
+                      <th>50<sup>/100</sup></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><span data-toggle="popover" data-trigger="hover" data-content="Legionella contamination has a severe impact on the health of the users, where the building becomes unusable when legionella is present. Therefore, it is important to take actions to prevent legionella contamindation, where the owner of the building is responsible for showers, fire hoses and cooling towers - unless agreed otherwise. The following preventive actions can be taken:1. Systems susceptible to legionella are rinsed 2. Systems susceptible to legionella are cleaned technically (e.g. thermically, chemically or physically) 3. Prevention plans are active Ideally, legionella is prevented using technical methods (e.g. thermically, chemically or physically) in combination with prevention plans.">Prevention of legionella</span></td>
+                      <td>Unknown</td>
+                    </tr>
+                    <tr>
+                      <td><span data-toggle="popover" data-trigger="hover" data-content="Asbestos negatively influence the health of the users. Ideally, no asbestos should be present in a building in any way.">Prescence of asbestos</span></td>
+                      <td>No</td>
+                    </tr>
+                    <tr>
+                      <td><span data-toggle="popover" data-trigger="hover" data-content="Asbestos was abolished in 1994. When construction date is before 1994, there is a risk of asbestos in the building.">Risk on asbestos</span></td>
+                      <td>No, the building is building is built after 1994</td>
+                    </tr>
+                    <tr>
+                      <td><span data-toggle="popover" data-trigger="hover" data-content="Ideally, the building should be inspectedfor asbestos by an independent external party.">Method of measuring asbestos in building</span></td>
+                      <td>Not applicable</td>
+                    </tr>
+                  </tbody>
+                  <thead>
+                    <tr>
+                      <th><i></i>External environment</th>
+                      <th>40<sup>/100</sup></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td> <span data-toggle="popover" data-trigger="hover" data-content="The air quality index determines the air quality of the air  surrounding the building - lower is better. Air quality influences the health of people in that area, where air quality is determined by the presence of NO2, O3, PM10 and PM2.5.">Air quality index</span></td>
+                      <td>4</td>
+                    </tr>
+                    <tr>
+                      <td><span data-toggle="popover" data-trigger="hover" data-content="The 'Wet milieubeheer' and the 'Wet geluidhinder' prescribe the extent to which roads can cause noise disturbance in the areas surrounding roads.">Noise disturbance</span></td>
+                      <td>Between 55 and 60</td>
+                    </tr>
+                    <tr>
+                      <td>Scent pollution</td>
+                      <td>Unknown</td>
+                    </tr>
+                    <tr>
+                      <td>Soil pollution</td>
+                      <td>Research conducted, further investigation may be necessary</td>
+                    </tr>
+                  </tbody>
+                  <thead>
+                    <tr>
+                      <th><i></i>Building comfort</th>
+                      <th>75<sup>/100</sup></th>
+                    </tr>
+                  </thead>
+                   <tbody>
+                    <tr>
+                      <td><span data-toggle="popover" data-trigger="hover" data-content="Ventilation in the building can be either natural or mechanic, where natural ventilation is always preferred above mechanic ventilation.">Ventilation strategy</span></td>
+                      <td>Mechanical input and output</td>
+                    </tr>
+                    <tr>
+                      <td><span data-toggle="popover" data-trigger="hover" data-content="The extent to which users can influence the tempature around their workplace, where control units must be within 7 meters of the work place.">Tempature control</span></td>
+                      <td>Users can open windows and can control radiators</td>
+                    </tr>
+                    <tr>
+                      <td><span data-toggle="popover" data-trigger="hover" data-content="The extent to which users can influence the ventilation around their workplace, where open windows should be within 7 meters.">Ventilation control</span></td>
+                      <td>Users can control ventilation around their workplace</td>
+                    </tr>
+                    <tr>
+                      <td><span data-toggle="popover" data-trigger="hover" data-content="The extent to which users can influence the lighting of around their workplace, where switches and sensors should be within 6 meters with 'easy access'.">Lighting control</span></td>
+                      <td>Users can influence lighting around their workplace</td>
+                    </tr>
+                    <tr>
+                      <td><span data-toggle="popover" data-trigger="hover" data-content="Ideally, every office space in the building has access to daylight - either directly or indirectly.">Access to daylight</span></td>
+                      <td>Every office space has daylight - directly or indirectly</td>
+                    </tr>
+                    <tr>
+                      <td><span data-toggle="popover" data-trigger="hover" data-content="Percentage glass refers to the amount of daylight that can access the building, where at least 20% of the facade should be comprised of glass.">Percentage of glass façade</span></td>
+                      <td>More than 20%</td>
+                    </tr>
+                  </tbody>
+                  <thead>
+                    <tr>
+                      <th><i></i>Health features</th>
+                      <th>90<sup>/100</sup></th>
+                    </tr>
+                  </thead>
+                   <tbody>
+                    <tr>
+                      <td><span data-toggle="popover" data-trigger="hover" data-content="Systems that prevent light pollution for its users.">Prevention of light pollution</span></td>
+                      <td>All windows have systems that prevent light pollution, that can be controlled by its users</td>
+                    </tr>
+                    <tr>
+                      <td><span data-toggle="popover" data-trigger="hover" data-content="Relaxation areas are areas - inside and outside - on the lot that users can reach without having to cross a road. Relaxation areas are defined as: 1. canteen facilities; 2. Tea or coffeepoints including seating; 3. lounge and eating places; 4. Seating outside removed at least 10 meters from roads, parking places and other sources of pollution.">Presence of relaxation areas</span></td>
+                      <td>Relaxation areas are present</td>
+                    </tr>
+                    <tr>
+                      <td><span data-toggle="popover" data-trigger="hover" data-content="An 'Open outside view' is defined as a view on landscape, objects (e.g. buildings), courtyard and the atrium. In offices one can speak of an outside view when work places are within 7 meters of a window with a 'Open outside view', where objects are at least 10 meters from the window and the window has a maximum height of 0,9 meters measured from the floor until the bottom of the window. In case of a view on the atrium or courtyard, the courtyard should at least contain greening, planters, furniture, art and such.">Number of offices with an outside view (in %)</span></td>
+                      <td>More than 75% of office spaces have an outside view</td>
+                    </tr>
+                    <tr>
+                      <td><span data-toggle="popover" data-trigger="hover" data-content="High frequency control gear in fluorescent lighting has less vibration and is not observable for its users. In addition, high frequency control gear has a fast startup time making it suitable for sensor control. Please note that high frequency control gear also consumes less energy compared to traditional control gear.">Type of fluorescent lighting</span></td>
+                      <td>All fluorescent lighting has high frequency control gear</td>
+                    </tr>
+                  </tbody>
+
+                  <thead>
+                    <tr class="b1dl">
+                      <th><i></i>Health</th>
+                      <th>56<sup>/100</sup></th>
+                    </tr>
+                  </thead>
+                </table>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-4 col-xs-12">
+            <div class="right-bar">
+              <div class="canvas-box">
+                <canvas id="myChart1" width="400" height="400"></canvas>
+                <span></span>
+              </div>
+              <p>Owners have buldings have certain repsonsibilities with respect to the health of its users ('Internal environment'). In addition, users increasingly expect and demand a certain extend of comfort ('Building comfort' and 'External environment') and features ('Health features') that enable them to work in a healthly and comfortable environment. Moreover, research has shown that this is beneficial for the overall effectiveness en efficiency of its users in terms of productivity.
+              </p>
+            </div>
+          </div>
+        </div>
+        <footer>
+          <p>Version 0.1 <img src="images/Luxs_Logo-Plain.png"><span class="pull-right">Powered by: </span></p>
+        </footer>
+      </div>
+    </div>
+  </div>
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>

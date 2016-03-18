@@ -42,7 +42,7 @@ $(document).ready(function() {
         },
         {
             value: 100,
-            color: "#aaa",
+            color: "#d4e5f7",
         }
     ];
     var data2 = [
@@ -85,7 +85,7 @@ $(document).ready(function() {
             var myRadarChart = new Chart(ctx).Radar(data, {
                 pointDot : false,
                 angleLineColor : "rgba(0,0,0,0)",
-                scaleLineColor: "rgba(0,0,0,0.26)"
+                scaleLineColor: "rgba(0,0,0,0.26)",
             });
         }
 
@@ -94,25 +94,25 @@ $(document).ready(function() {
             var myRadarChart = new Chart(ctx).PolarArea(data2, {
                 pointDot : false,
                 angleLineColor : "rgba(0,0,0,0)",
-                scaleLineColor: "rgba(0,0,0,0.15)"
+                scaleLineColor: "rgba(0,0,0,0.15)",
+                legendTemplate : "<ul class=\"<%=name.toLowerCase()%>-legend\"><% for (var i=0; i<segments.length; i++){%><li><span style=\"background-color:<%=segments[i].fillColor%>\"></span><%if(segments[i].label){%><%=segments[i].label%><%}%></li><%}%></ul>"
             });
-
+            document.getElementById('js-legend').innerHTML = myRadarChart.generateLegend();
         }
 
         if($("#myChart1").length){
-
             var ctx1 = $("#myChart1").get(0).getContext("2d");
             var myDoughnutChart = new Chart(ctx1).Doughnut(data1, {
                 scaleLineWidth: 1,
-                percentageInnerCutout : 50,
-                showTooltips: false
+                percentageInnerCutout : 80,
+                showTooltips: false,
             });
-            $("#myChart1").after("<span>"+ data1[0].value +"<sup>/"+ data1[1].value +"</sup></span>");
+            $(".canvas-box span").html(data1[0].value +"<sup>/"+ data1[1].value +"</sup>");
 
         }
     }
     chart();
-    $(".toggle").click(function(){
+    $(document).on("click",".toggle",function(){
         setTimeout(function(){
             chart();
         }, 300);
