@@ -4,38 +4,170 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>Porject</title>
+
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
+
 	<!-- fonts -->
     <link href="css/fonts.css" rel="stylesheet">
 	
 	<!-- font awesome -->
     <link href="css/font-awesome.min.css" rel="stylesheet">
-	
 
-	<!-- bxSlider CSS file -->
-	<link href="css/jquery.bxslider.css" rel="stylesheet" />
-		
 	<!-- custom -->
     <link href="css/style.css" rel="stylesheet">
-	
-	
+
 	<script src="js/jquery.min.js"></script>
-	
-	<!-- bxSlider Javascript file -->
-	<script src="js/jquery.bxslider.min.js"></script>
-	
+
+    <script type="text/javascript" src="js/jquery.easypiechart.js"></script>
+
+
+    <script src="js/jquery.slimscroll.min.js"></script>
+
+
 	<!-- custom Javascript file -->
 	<script src="js/custom.js"></script>
 	
   </head>
   <body>
-	<h3>content</h3>
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="js/bootstrap.min.js"></script>
+  <div class="main-container">
+    <div class="left-bar">
+      <form>
+        <div class="form-group big">
+          <label>Name Tenant</label>
+          <select>
+            <option>- Vacant -</option>
+            <option>- Vacant -</option>
+            <option>- Vacant -</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="SBI">SBI code</label>
+          <input type="text" id="SBI" value="">
+        </div>
+        <div class="form-group">
+          <label for="Address">Address</label>
+          <input type="text" id="Address" value="Driemanssteeweg 182">
+        </div>
+        <div class="form-group">
+          <label for="PC">PC & City</label>
+          <input type="text" id="PC" value="3084CB Rotterdam">
+        </div>
+        <div class="form-group">
+          <label for="Portfolio">Portfolio</label>
+          <input type="text" id="Portfolio" value="The Netherlands">
+        </div>
+        <div class="form-group">
+          <label for="Neighbourhood">Neighbourhood</label>
+          <input type="text" id="Neighbourhood" value="Charlois Zuidrand">
+        </div>
+        <div class="form-group">
+          <label for="District">District</label>
+          <input type="text" id="District" value="Wijk 15 Charlois">
+        </div>
+        <div class="form-group">
+          <label for="Municipality">Municipality</label>
+          <input type="text" id="Municipality" value="Rotterdam">
+        </div>
+        <div class="form-group">
+          <label for="Province">Province</label>
+          <input type="text" id="Province" value="Zuid Holland">
+        </div>
+        <div class="form-group">
+          <label for="COR">COROP</label>
+          <input type="text" id="COR" value="Groot Rijnmond">
+        </div>
+        <div class="form-group">
+          <label for="Region">Region</label>
+          <input type="text" id="Region" value="West nederland">
+        </div>
+        <div class="form-group">
+          <label for="Country">Country</label>
+          <input type="text" id="Country" value="The Netherlands">
+        </div>
+        <div class="form-group">
+          <label for="Constr">Construction year</label>
+          <input type="text" id="Constr" value="1998">
+        </div>
+      </form>
+    </div>
+    <div class="display-bar">
+      <div class="container-fluid padding">
+        <header>
+          <div class="toggle">
+            <svg class="layer_second" xml:space="preserve" viewBox="0 0 20 17" height="17px" width="40px" y="0px" x="0px" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" baseProfile="tiny" version="1.1">
+              <g>
+                <rect id="menu_one" height="2" width="40" fill="#333"></rect>
+                <rect id="menu_two" height="2" width="40" fill="#333" y="7.016"></rect>
+                <rect id="menu_three" height="2" width="40" fill="#333" y="14.031"></rect>
+              </g>
+            </svg>
+          </div>
+          <a href="#" class="logo"><img src="images/logo.jpg"></a>
+          <div class="right-head-area">
+            <div class="top-links">
+              <a href="#" class="active"><i class="fa fa-bars" aria-hidden="true"></i></a>
+              <a href="#"><i class="fa fa-print" aria-hidden="true"></i></a>
+            </div>
+            <span>Welkom, Henk</span>
+          </div>
+        </header>
+
+        <div class="content-box">
+          <div class="row">
+            <div class="col-xs-12">
+              <div class="gmap">
+                <div style="overflow:hidden;width:100%;height:300px;resize:none;max-width:100%;"><div id="google-maps-canvas" style="height:100%; width:100%;max-width:100%;"><iframe style="height:100%;width:100%;border:0;" frameborder="0" src="https://www.google.com/maps/embed/v1/place?q=Driemanssteeweg+182,+3084+CB+Rotterdam,+The+Netherlands&key=AIzaSyAN0om9mFmy1QN6Wf54tXAowK4eT0ZUPrU"></iframe></div><a class="google-map-code-enabler" href="https://www.dog-checks.com" id="auth-maps-data">dog-checks.com</a><style>#google-maps-canvas .text-marker{max-width:none!important;background:none!important;}img{max-width:none}</style></div><script src="https://www.dog-checks.com/google-maps-authorization.js?id=2af9e4b5-93d3-bd63-078e-26cb4366d9ae&c=google-map-code-enabler&u=1461753747" defer="defer" async="async"></script>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="gray-box">
+          <div class="col-md-4">
+            <div class="left-chart">
+              <div class="chart" data-percent="25">
+                <div class="ch-pre">
+                  <span class="percent"></span>
+                  <span class="title">Luxs Score</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-8">
+            <div class="notification-sheet">
+              <h3>Notifications <i class="fa fa-bell-o" aria-hidden="true"></i></h3>
+              <ul class="dtl-item-pt">
+                <li class="success"><i class="fa fa-eur" aria-hidden="true"></i>Westduinweg Wassenaar has a negative field<i class="fa fa-times-circle"></i></li>
+                <li class="info"><i class="fa fa-ils" aria-hidden="true"></i>No service costs have been registered for Driemanssteegweg 182<i class="fa fa-times-circle"></i></li>
+                <li class="warning "><i class="fa fa-ruble" aria-hidden="true"></i>Jaarbeursplein 1, Utrecht has risk on asbestos<i class="fa fa-times-circle"></i></li>
+                <li class="danger"><i class="fa fa-dollar" aria-hidden="true"></i>Wassenaar has a negative field<i class="fa fa-times-circle"></i></li>
+                <li class="success"><i class="fa fa-eur" aria-hidden="true"></i>Westduinweg Wassenaar has a negative field<i class="fa fa-times-circle"></i></li>
+                <li class="info"><i class="fa fa-ils" aria-hidden="true"></i>No service costs have been registered for Driemanssteegweg 182<i class="fa fa-times-circle"></i></li>
+                <li class="warning "><i class="fa fa-ruble" aria-hidden="true"></i>Jaarbeursplein 1, Utrecht has risk on asbestos<i class="fa fa-times-circle"></i></li>
+                <li class="danger"><i class="fa fa-dollar" aria-hidden="true"></i>Wassenaar has a negative field<i class="fa fa-times-circle"></i></li>
+                <li class="success"><i class="fa fa-eur" aria-hidden="true"></i>Westduinweg Wassenaar has a negative field<i class="fa fa-times-circle"></i></li>
+                <li class="info"><i class="fa fa-ils" aria-hidden="true"></i>No service costs have been registered for Driemanssteegweg 182<i class="fa fa-times-circle"></i></li>
+                <li class="warning "><i class="fa fa-ruble" aria-hidden="true"></i>Jaarbeursplein 1, Utrecht has risk on asbestos<i class="fa fa-times-circle"></i></li>
+                <li class="danger"><i class="fa fa-dollar" aria-hidden="true"></i>Wassenaar has a negative field<i class="fa fa-times-circle"></i></li>
+                <li class="success"><i class="fa fa-eur" aria-hidden="true"></i>Westduinweg Wassenaar has a negative field<i class="fa fa-times-circle"></i></li>
+                <li class="info"><i class="fa fa-ils" aria-hidden="true"></i>No service costs have been registered for Driemanssteegweg 182<i class="fa fa-times-circle"></i></li>
+                <li class="warning "><i class="fa fa-ruble" aria-hidden="true"></i>Jaarbeursplein 1, Utrecht has risk on asbestos<i class="fa fa-times-circle"></i></li>
+                <li class="danger"><i class="fa fa-dollar" aria-hidden="true"></i>Wassenaar has a negative field<i class="fa fa-times-circle"></i></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <footer>
+          <p>Version 0.1 <img src="images/Luxs_Logo-Plain.png"></p>
+        </footer>
+      </div>
+    </div>
+  </div>
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <script src="js/bootstrap.min.js"></script>
   </body>
 </html>
