@@ -12,7 +12,7 @@
 
 body
 {
-  background: #eeeeee none repeat scroll 0 0;
+  background: #fff none repeat scroll 0 0;
   font-family: calibri;
   margin: 0;
   outline: medium none;
@@ -47,7 +47,7 @@ ul{
 .chart {
   display: inline-block;
   height: 250px;
-  margin: 100px;
+  margin: 10%;
   position: relative;
   text-align: center;
   width: 250px;
@@ -55,6 +55,55 @@ ul{
 	position: absolute;
 	top: 0;
 	left: 0;
+  }
+}
+.charts-list{
+  background: #fff none repeat scroll 0 0;
+  display: table;
+  margin: 0 auto;
+  max-width: 1500px;
+  padding: 0 30px;
+  width: 100%;
+  .chart-list-item{
+	cursor: pointer;
+	float: left;
+	padding: 25px 0 50px;
+	position: relative;
+	text-align: center;
+	width: 20%;
+	&.active:before{
+	  border-color: #eeeeee transparent;
+	  border-style: none solid solid;
+	  border-width: 19px;
+	  content: "";
+	  left: 50%;
+	  margin-left: -19px;
+	  position: absolute;
+	  top: 104%;
+	}
+	.piechart {
+	  display: inline-block;
+	  height: 200px;
+	  position: relative;
+	  text-align: center;
+	  width: 200px;
+	  &>canvas {
+		height: 100%;
+		left: 0;
+		position: absolute;
+		top: 0;
+		width: 100%;
+	  }
+	  .ch-pre {
+		line-height: 200px;
+		&::before {
+		  transform: scale(0.56);
+		}
+		.title {
+		  font-size: 30px;
+		}
+	  }
+	}
   }
 }
 .ch-pre {
@@ -76,6 +125,7 @@ ul{
   }
   .percent{
 	color: #fff;
+	height: 100%;
 	left: 0;
 	position: absolute;
 	top: 0;
@@ -203,7 +253,6 @@ ul{
 		margin: 5px 4px 0;
 	  }
 	}
-
   }
 }
 
@@ -211,7 +260,7 @@ ul{
   float: left;
   padding: 40px 60px;
   position: relative;
-  width: 100%;;
+  width: 100%;
 }
 .gmap{
   background: #fff none repeat scroll 0 0;
@@ -300,7 +349,131 @@ ul{
 	}
   }
 }
+.main-detail-box{
+  background: #eeeeee none repeat scroll 0 0;
+  float: left;
+  margin-top: 30px;
+  padding: 0 39px;
+  width: 100%;
+  .detail-content{
+	display: table;
+	margin: 0 auto;
+	max-width: 1500px;
+	width: 100%;
+	.main-detail-item{
+	  display: none;
+	  padding: 40px 0;
+	  p{
+		border-bottom: 1px solid #bababa;
+		color: #7f7f7f;
+		font-size: 23px;
+		padding-bottom: 23px;
+		text-align: center;
+	  }
+	  .data-table{
+		background: #fff none repeat scroll 0 0;
+		border-bottom: 8px solid #cccccc;
+		border-top: 15px solid #3675b4;
+		margin-top: 55px;
+		padding: 0 15px;
+		h3{
+		  background: #4d5360 none repeat scroll 0 0;
+		  color: #fff;
+		  font-size: 25px;
+		  margin: 0 -15px;
+		  padding: 13px 16px;
+		}
+		.table{
+		  margin-bottom:0;
+		  .popover{
+			background:#FFE721;
+			font-size:12px;
+			position:absolute;
+			margin-left:10px;
+			margin-top:-10px;
+			.arrow:after{
+			  border-right-color :#FFE721;
+			}
+		  }
+		  thead{
+			tr{
+			  th{
+				cursor: pointer;
+				font-size: 24px;
+				font-weight: 600;
+				max-width: 0;
+				padding: 10px 5px;
+				sup{
+				  font-weight: 400;
+				  margin-left: 7px;
+				}
+				i{
+				  background: transparent url("../images/right-arrow.png") no-repeat scroll 0 0;
+				  display: inline-block;
+				  height: 14px;
+				  margin-right: 4px;
+				  transform: translate(-3px, 0px);
+				  width: 14px;
+				  background-size:100% auto;
+				  &.open{
+					transform: translate(-3px, 0px) rotate(90deg);
+				  }
+				}
+			  }
+			  &.b1dl{
 
+				th{
+				  border-bottom: 1px solid #fff;
+				  border-top: 1px solid #aaafaf;
+				  i{
+					background:none;
+
+				  }
+				}
+			  }
+			}
+		  }
+		  tbody{
+			display: none;
+			tr{
+			  td{
+				border-top: 1px dotted #b9b9b9;
+				color: #000000;
+				font-size: 16px;
+				max-width: 0;
+				padding: 6px 5px;
+				span{
+				  position:relative;
+				  display:inline-block;
+				  width:100%;
+				}
+			  }
+			}
+			tr.inner-row{
+			  td{
+				font-size: 15px;
+				padding:6px 5px;
+			  }
+
+			  td:first-child{
+				padding-left:15px;
+			  }
+			}
+			tr.inner-row-2{
+			  td{
+				font-size: 14px;
+				padding:6px 5px;
+			  }
+			  td:first-child{
+				padding-left:25px;
+			  }
+			}
+		  }
+		}
+	  }
+	}
+  }
+}
 
 
 footer{
