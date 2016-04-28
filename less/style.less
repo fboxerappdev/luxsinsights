@@ -74,10 +74,10 @@ ul{
 	&.active:before{
 	  border-color: #eeeeee transparent;
 	  border-style: none solid solid;
-	  border-width: 19px;
+	  border-width: 21px;
 	  content: "";
 	  left: 50%;
-	  margin-left: -19px;
+	  margin-left: -21px;
 	  position: absolute;
 	  top: 104%;
 	}
@@ -207,7 +207,7 @@ ul{
   header{
 	background: #fff none repeat scroll 0 0;
 	display: inline-block;
-	padding: 18px 20px;
+	padding: 8px 20px;
 	width: 100%;
 	.toggle{
 	  float: left;
@@ -265,7 +265,7 @@ ul{
 .gmap{
   background: #fff none repeat scroll 0 0;
   margin: -40px -60px;
-  padding: 10px 0 40px;
+  padding: 0 0 40px;
 }
 
 .gray-box{
@@ -439,7 +439,7 @@ ul{
 			  td{
 				border-top: 1px dotted #b9b9b9;
 				color: #000000;
-				font-size: 16px;
+				font-size: 18px;
 				max-width: 0;
 				padding: 6px 5px;
 				span{
@@ -451,7 +451,7 @@ ul{
 			}
 			tr.inner-row{
 			  td{
-				font-size: 15px;
+				font-size: 16px;
 				padding:6px 5px;
 			  }
 
@@ -509,14 +509,77 @@ footer{
 
 }
 @media (min-width: 992px) {
+  .gray-box .notification-sheet {
+	margin-right: 20px;
+  }
+  .chart {
+	margin: 13% 5%;
+  }
+  .gray-box .left-chart::before {
+	width: 125%;
+  }
+  .gray-box .left-chart {
+	height: 500px;
+  }
+  .gray-box .notification-sheet ul {
+	height: 317px;
+  }
+  .charts-list .chart-list-item .piechart .ch-pre .title {
+	font-size: 24px;
+  }
+  .main-detail-box .detail-content .main-detail-item p {
+	font-size:20px;
+  }
 
+
+  .charts-list .chart-list-item .piechart {
+	height: 160px;
+	width: 160px;
+  }
+  .charts-list .chart-list-item .piechart .ch-pre {
+	line-height: 160px;
+  }
 }
 @media (min-width: 1280px) {
 
+  .charts-list .chart-list-item .piechart {
+	height: 170px;
+	width: 170px;
+  }
+  .charts-list .chart-list-item .piechart .ch-pre {
+	line-height: 170px;
+  }
 }
 
 @media (min-width: 1500px) {
-
+  .gray-box .notification-sheet {
+	margin-right: 70px;
+  }
+  .chart {
+	margin: 10%;
+  }
+  .gray-box .left-chart::before {
+	width: 95%;
+  }
+  .gray-box .left-chart {
+	height: 614px;
+  }
+  .gray-box .notification-sheet ul {
+	height: 424px;
+  }
+  .charts-list .chart-list-item .piechart .ch-pre .title {
+	font-size: 30px;
+  }
+  .main-detail-box .detail-content .main-detail-item p {
+	font-size: 23px;
+  }
+  .charts-list .chart-list-item .piechart {
+	height: 200px;
+	width: 200px;
+  }
+  .charts-list .chart-list-item .piechart .ch-pre {
+	line-height: 200px;
+  }
 }
 
 

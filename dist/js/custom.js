@@ -30,12 +30,16 @@ $(document).ready(function() {
         });
     }
 
+    var hie = $('.dtl-item-pt').height();
+
     $('.dtl-item-pt').slimScroll({
-        height: '424px',
+        height: hie,
         railVisible: true,
         size: '6px',
         wheelStep: 3
     });
+
+
     $('.dtl-item-pt li i:last-child').click(function(){
         $(this).parent().css("background","gray").fadeOut(function(){
             $(this).remove();
@@ -80,6 +84,10 @@ $(document).ready(function() {
             }
         });
     }
+
+
+
+
     piechart("#financial","#FDB45C");
     piechart("#health","#46BFBD");
     piechart("#sustainability","#ACD651");
