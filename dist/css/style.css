@@ -68,6 +68,10 @@ ul {
   position: relative;
   text-align: center;
   width: 20%;
+  opacity: 0.6;
+}
+.charts-list .chart-list-item.active {
+  opacity: 1;
 }
 .charts-list .chart-list-item.active:before {
   border-color: #eeeeee transparent;
@@ -78,6 +82,9 @@ ul {
   margin-left: -21px;
   position: absolute;
   top: 104%;
+}
+.charts-list .chart-list-item.active .ch-pre::before {
+  background: #333 none repeat scroll 0 0;
 }
 .charts-list .chart-list-item .piechart {
   display: inline-block;
@@ -494,10 +501,13 @@ footer p img {
     height: 317px;
   }
   .charts-list .chart-list-item .piechart .ch-pre .title {
-    font-size: 24px;
+    font-size: 21px;
   }
   .main-detail-box .detail-content .main-detail-item p {
-    font-size: 20px;
+    font-size: 17px;
+  }
+  .display-bar header .logo img {
+    width: 216px;
   }
   .charts-list .chart-list-item .piechart {
     height: 160px;
@@ -506,14 +516,53 @@ footer p img {
   .charts-list .chart-list-item .piechart .ch-pre {
     line-height: 160px;
   }
+  .display-bar header .right-head-area span {
+    font-size: 27px;
+  }
+  .gray-box .notification-sheet h3 {
+    font-size: 25px;
+  }
+  .gray-box .notification-sheet h3 i {
+    font-size: 22px;
+  }
+  .gray-box .notification-sheet ul li {
+    font-size: 18px;
+  }
+  .main-detail-box .detail-content .main-detail-item .data-table .table thead tr th {
+    font-size: 22px;
+  }
 }
 @media (min-width: 1280px) {
+  .charts-list .chart-list-item .piechart .ch-pre .title {
+    font-size: 24px;
+  }
   .charts-list .chart-list-item .piechart {
     height: 170px;
     width: 170px;
   }
   .charts-list .chart-list-item .piechart .ch-pre {
     line-height: 170px;
+  }
+  .display-bar header .logo img {
+    width: 250px;
+  }
+  .display-bar header .right-head-area span {
+    font-size: 30px;
+  }
+  .gray-box .notification-sheet h3 {
+    font-size: 30px;
+  }
+  .gray-box .notification-sheet h3 i {
+    font-size: 26px;
+  }
+  .gray-box .notification-sheet ul li {
+    font-size: 21px;
+  }
+  .main-detail-box .detail-content .main-detail-item .data-table .table thead tr th {
+    font-size: 24px;
+  }
+  .main-detail-box .detail-content .main-detail-item p {
+    font-size: 20px;
   }
 }
 @media (min-width: 1500px) {

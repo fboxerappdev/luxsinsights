@@ -40,6 +40,7 @@ $(document).ready(function() {
     });
 
 
+
     $('.dtl-item-pt li i:last-child').click(function(){
         $(this).parent().css("background","gray").fadeOut(function(){
             $(this).remove();
