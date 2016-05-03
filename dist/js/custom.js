@@ -17,6 +17,7 @@ $(document).ready(function() {
 
 
 
+
     $(".dtl-box-item h3 span").click(function(){
         $(this).parent().next().slideToggle();
     });
@@ -33,9 +34,10 @@ $(document).ready(function() {
 
     $('.dtl-item-pt').slimScroll({
         height: hie,
-        railVisible: false,
-        size: '6px',
-        wheelStep: 3
+        railVisible: true,
+        alwaysVisible: true,
+        size: '11px',
+        wheelStep: 3,
     });
 
 
@@ -48,8 +50,17 @@ $(document).ready(function() {
 
 
 
-    $(".chart-list-item").on("click",function(){
-        $(".chart-list-item").removeClass("active");
+    var hit = $('.dtl-item-pt').height();
+    $('.dtl-item-pt').slimScroll({
+        height: '368px',
+        railVisible: true,
+        alwaysVisible: true,
+        size: '11px',
+        wheelStep: 14,
+    });
+
+    $("#tabid .chart-list-item").on("click",function(){
+        $("#tabid .chart-list-item").removeClass("active");
         $(this).addClass("active");
         var index = $(this).index();
 
@@ -94,4 +105,13 @@ $(document).ready(function() {
 
     var src = $(this).children("img").attr("src");
 
+
+    $(".dtl-item-pt a").each(function() {
+        var mytxt = $(this).find("span").text();
+        var cont = '<div><b></b></div>';
+        $(this).find("span").after(cont);
+        $(this).find("b").animate({
+            width:mytxt+"%"
+        },400);
+    });
 });

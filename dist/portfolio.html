@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Porject</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- fonts -->
+    <link href="css/fonts.css" rel="stylesheet">
+
+    <!-- font awesome -->
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+
+    <!-- custom -->
+    <link href="css/style.css" rel="stylesheet">
+
+    <script src="js/jquery.min.js"></script>
+
+    <script type="text/javascript" src="js/jquery.easypiechart.js"></script>
+
+
+    <script src="js/jquery.slimscroll.min.js"></script>
+
+
+
+    <!-- custom Javascript file -->
+    <script src="js/custom.js"></script>
+
+</head>
+<body>
+<div class="main-container">
+    <div class="left-bar">
+        <form>
+            <div class="form-group big">
+                <label>Name Tenant</label>
+                <select>
+                    <option>- Vacant -</option>
+                    <option>- Vacant -</option>
+                    <option>- Vacant -</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="SBI">SBI code</label>
+                <input type="text" id="SBI" value="">
+            </div>
+            <div class="form-group">
+                <label for="Address">Address</label>
+                <input type="text" id="Address" value="Driemanssteeweg 182">
+            </div>
+            <div class="form-group">
+                <label for="PC">PC & City</label>
+                <input type="text" id="PC" value="3084CB Rotterdam">
+            </div>
+            <div class="form-group">
+                <label for="Portfolio">Portfolio</label>
+                <input type="text" id="Portfolio" value="The Netherlands">
+            </div>
+            <div class="form-group">
+                <label for="Neighbourhood">Neighbourhood</label>
+                <input type="text" id="Neighbourhood" value="Charlois Zuidrand">
+            </div>
+            <div class="form-group">
+                <label for="District">District</label>
+                <input type="text" id="District" value="Wijk 15 Charlois">
+            </div>
+            <div class="form-group">
+                <label for="Municipality">Municipality</label>
+                <input type="text" id="Municipality" value="Rotterdam">
+            </div>
+            <div class="form-group">
+                <label for="Province">Province</label>
+                <input type="text" id="Province" value="Zuid Holland">
+            </div>
+            <div class="form-group">
+                <label for="COR">COROP</label>
+                <input type="text" id="COR" value="Groot Rijnmond">
+            </div>
+            <div class="form-group">
+                <label for="Region">Region</label>
+                <input type="text" id="Region" value="West nederland">
+            </div>
+            <div class="form-group">
+                <label for="Country">Country</label>
+                <input type="text" id="Country" value="The Netherlands">
+            </div>
+            <div class="form-group">
+                <label for="Constr">Construction year</label>
+                <input type="text" id="Constr" value="1998">
+            </div>
+        </form>
+    </div>
+    <div class="display-bar">
+        <div class="container-fluid padding">
+            <header>
+                <div class="toggle">
+                    <svg class="layer_second" xml:space="preserve" viewBox="0 0 20 17" height="17px" width="40px" y="0px" x="0px" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" baseProfile="tiny" version="1.1">
+              <g>
+                <rect id="menu_one" height="2" width="40" fill="#333"></rect>
+                <rect id="menu_two" height="2" width="40" fill="#333" y="7.016"></rect>
+                <rect id="menu_three" height="2" width="40" fill="#333" y="14.031"></rect>
+              </g>
+            </svg>
+                </div>
+                <a href="#" class="logo"><img src="images/logo.jpg"></a>
+                <div class="right-head-area">
+                    <div class="top-links">
+                        <a href="#"><i class="icon_home"></i></a>
+                        <a href="#"><i class="icon_floorplan2D"></i></a>
+                        <a href="#"><i class="icon_floorplanList"></i></a>
+                        <a href="#"><i class="icon_logout"></i></a>
+                    </div>
+                    <span>Welkom, Henk</span>
+                </div>
+            </header>
+            <div class="content-box">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div class="gmap big" id="map">
+                            <!--<div class="map-content">-->
+                            <!--<p>Name:<span>Noord-Holland</span></p>-->
+                            <!--<p>Manager<span>John doe</span></p>-->
+                            <!--<p>Tennants/buildings<span>45/32</span></p>-->
+                            <!--<p>Area<span>1.20 m2</span></p>-->
+                            <!--<p>Total value<span>100.00.000</span></p>-->
+                            <!--<p>Tennants/buildings<span>45/32</span></p>-->
+                            <!--<p>Yearly rent income<span>100.00.00</span></p>-->
+                            <!--<p>Average yield<span>6.59%</span></p>-->
+                            <!--</div>-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-list">
+                <ul>
+                    <li class="active">
+                        <img src="images/iconsCartoon/icon_portfolioReport.png">
+                        <span>Overview</span>
+                    </li>
+                    <li>
+                        <img src="images/iconsCartoon/icon_floorplanList.png">
+                        <span>List</span>
+                    </li>
+                    <li>
+                        <img src="images/iconsCartoon/icon_portfolioNotifications.png">
+                        <span>Notifications</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="main-detail-box">
+                <div class="detail-content">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="dtl-box-item">
+                                    <h3>Top Locations <span></span></h3>
+                                    <div class="dtl-item-pt">
+                                        <a href="#">Gustav Mahler 1, Amsterdam<div class="pro-bar"><span>98</span></div></a>
+                                        <a href="#">Reykjavikplein 1 Utrecht<div class="pro-bar"><span>88</span></div></a>
+                                        <a href="#">Bertelmanplein 88,Loosdrecht<div class="pro-bar"><span>78</span></div></a>
+                                        <a href="#">Gustav Mahler 1, Amsterdam<div class="pro-bar"><span>70</span></div></a>
+                                        <a href="#">Reykjavikplein 1 Utrecht<div class="pro-bar"><span>60</span></div></a>
+                                        <a href="#">Bertelmanplein 88,Loosdrecht<div class="pro-bar"><span>50</span></div></a>
+                                        <a href="#">Gustav Mahler 1, Amsterdam<div class="pro-bar"><span>42</span></div></a>
+                                        <a href="#">Reykjavikplein 1 Utrecht<div class="pro-bar"><span>35</span></div></a>
+                                        <a href="#">Bertelmanplein 88,Loosdrecht<div class="pro-bar"><span>28</span></div></a>
+                                        <a href="#">Gustav Mahler 1, Amsterdam<div class="pro-bar"><span>42</span></div></a>
+                                        <a href="#">Reykjavikplein 1 Utrecht<div class="pro-bar"><span>35</span></div></a>
+                                        <a href="#">Bertelmanplein 88,Loosdrecht<div class="pro-bar"><span>28</span></div></a>
+                                        <a href="#">Gustav Mahler 1, Amsterdam<div class="pro-bar"><span>42</span></div></a>
+                                        <a href="#">Reykjavikplein 1 Utrecht<div class="pro-bar"><span>35</span></div></a>
+                                        <a href="#">Bertelmanplein 88,Loosdrecht<div class="pro-bar"><span>28</span></div></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="dtl-box-item">
+                                    <h3>Bottom Locations <span></span></h3>
+                                    <div class="dtl-item-pt">
+                                        <a href="#">Gustav Mahler 1, Amsterdam<div class="pro-bar"><span>98</span></div></a>
+                                        <a href="#">Reykjavikplein 1 Utrecht<div class="pro-bar"><span>88</span></div></a>
+                                        <a href="#">Bertelmanplein 88,Loosdrecht<div class="pro-bar"><span>78</span></div></a>
+                                        <a href="#">Gustav Mahler 1, Amsterdam<div class="pro-bar"><span>70</span></div></a>
+                                        <a href="#">Reykjavikplein 1 Utrecht<div class="pro-bar"><span>60</span></div></a>
+                                        <a href="#">Bertelmanplein 88,Loosdrecht<div class="pro-bar"><span>50</span></div></a>
+                                        <a href="#">Gustav Mahler 1, Amsterdam<div class="pro-bar"><span>42</span></div></a>
+                                        <a href="#">Reykjavikplein 1 Utrecht<div class="pro-bar"><span>35</span></div></a>
+                                        <a href="#">Bertelmanplein 88,Loosdrecht<div class="pro-bar"><span>28</span></div></a>
+                                        <a href="#">Gustav Mahler 1, Amsterdam<div class="pro-bar"><span>42</span></div></a>
+                                        <a href="#">Reykjavikplein 1 Utrecht<div class="pro-bar"><span>35</span></div></a>
+                                        <a href="#">Bertelmanplein 88,Loosdrecht<div class="pro-bar"><span>28</span></div></a>
+                                        <a href="#">Gustav Mahler 1, Amsterdam<div class="pro-bar"><span>42</span></div></a>
+                                        <a href="#">Reykjavikplein 1 Utrecht<div class="pro-bar"><span>35</span></div></a>
+                                        <a href="#">Bertelmanplein 88,Loosdrecht<div class="pro-bar"><span>28</span></div></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="charts-list showchart">
+                                    <div class="chart-list-item">
+                                        <div id="financial" class="piechart" data-percent="8">
+                                            <div class="ch-pre">
+                                                <span class="percent"></span>
+                                                <span class="title">Financial</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="chart-list-item">
+                                        <div id="health" class="piechart" data-percent="56">
+                                            <div class="ch-pre">
+                                                <span class="percent"></span>
+                                                <span class="title">Health</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="chart-list-item">
+                                        <div id="sustainability" class="piechart" data-percent="3">
+                                            <div class="ch-pre">
+                                                <span class="percent"></span>
+                                                <span class="title">Sustainability</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="chart-list-item">
+                                        <div id="safety" class="piechart" data-percent="24">
+                                            <div class="ch-pre">
+                                                <span class="percent"></span>
+                                                <span class="title">Safety</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="chart-list-item">
+                                        <div id="usability" class="piechart" data-percent="33">
+                                            <div class="ch-pre">
+                                                <span class="percent"></span>
+                                                <span class="title">Usability</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="dtl-box-item">
+                                    <h3>Biggest Change <span></span></h3>
+                                    <div class="dtl-item-pt change-up">
+                                        <a href="#">Gustav Mahler 1, Amsterdam<div class="pro-bar"><span>98</span></div></a>
+                                        <a href="#">Reykjavikplein 1 Utrecht<div class="pro-bar"><span>88</span></div></a>
+                                        <a href="#">Bertelmanplein 88,Loosdrecht<div class="pro-bar"><span>78</span></div></a>
+                                        <a href="#">Gustav Mahler 1, Amsterdam<div class="pro-bar"><span>70</span></div></a>
+                                        <a href="#">Reykjavikplein 1 Utrecht<div class="pro-bar"><span>60</span></div></a>
+                                        <a href="#">Bertelmanplein 88,Loosdrecht<div class="pro-bar"><span>50</span></div></a>
+                                        <a href="#">Gustav Mahler 1, Amsterdam<div class="pro-bar"><span>42</span></div></a>
+                                        <a href="#">Reykjavikplein 1 Utrecht<div class="pro-bar"><span>35</span></div></a>
+                                        <a href="#">Bertelmanplein 88,Loosdrecht<div class="pro-bar"><span>28</span></div></a>
+                                        <a href="#">Gustav Mahler 1, Amsterdam<div class="pro-bar"><span>42</span></div></a>
+                                        <a href="#">Reykjavikplein 1 Utrecht<div class="pro-bar"><span>35</span></div></a>
+                                        <a href="#">Bertelmanplein 88,Loosdrecht<div class="pro-bar"><span>28</span></div></a>
+                                        <a href="#">Gustav Mahler 1, Amsterdam<div class="pro-bar"><span>42</span></div></a>
+                                        <a href="#">Reykjavikplein 1 Utrecht<div class="pro-bar"><span>35</span></div></a>
+                                        <a href="#">Bertelmanplein 88,Loosdrecht<div class="pro-bar"><span>28</span></div></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="dtl-box-item">
+                                    <h3>Biggest Change <span></span></h3>
+                                    <div class="dtl-item-pt change-down">
+                                        <a href="#">Gustav Mahler 1, Amsterdam<div class="pro-bar"><span>98</span></div></a>
+                                        <a href="#">Reykjavikplein 1 Utrecht<div class="pro-bar"><span>88</span></div></a>
+                                        <a href="#">Bertelmanplein 88,Loosdrecht<div class="pro-bar"><span>78</span></div></a>
+                                        <a href="#">Gustav Mahler 1, Amsterdam<div class="pro-bar"><span>70</span></div></a>
+                                        <a href="#">Reykjavikplein 1 Utrecht<div class="pro-bar"><span>60</span></div></a>
+                                        <a href="#">Bertelmanplein 88,Loosdrecht<div class="pro-bar"><span>50</span></div></a>
+                                        <a href="#">Gustav Mahler 1, Amsterdam<div class="pro-bar"><span>42</span></div></a>
+                                        <a href="#">Reykjavikplein 1 Utrecht<div class="pro-bar"><span>35</span></div></a>
+                                        <a href="#">Bertelmanplein 88,Loosdrecht<div class="pro-bar"><span>28</span></div></a>
+                                        <a href="#">Gustav Mahler 1, Amsterdam<div class="pro-bar"><span>42</span></div></a>
+                                        <a href="#">Reykjavikplein 1 Utrecht<div class="pro-bar"><span>35</span></div></a>
+                                        <a href="#">Bertelmanplein 88,Loosdrecht<div class="pro-bar"><span>28</span></div></a>
+                                        <a href="#">Gustav Mahler 1, Amsterdam<div class="pro-bar"><span>42</span></div></a>
+                                        <a href="#">Reykjavikplein 1 Utrecht<div class="pro-bar"><span>35</span></div></a>
+                                        <a href="#">Bertelmanplein 88,Loosdrecht<div class="pro-bar"><span>28</span></div></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <footer>
+                <p>Version 0.1 <img src="images/Luxs_Logo-Plain.png"></p>
+            </footer>
+        </div>
+    </div>
+</div>
+
+
+<script>
+
+    var citymap = {
+        chicago: {
+            center: {lat: 51.8643851, lng: 4.4635461},
+            population: 1
+        },
+        newyork: {
+            center: {lat: 51.8664836, lng: 4.4564704},
+            population: 1
+        },
+        losangeles: {
+            center: {lat:51.8658195, lng: 4.4702774},
+            population: 1
+        },
+        vancouver: {
+            center: {lat: 51.8640456, lng: 4.4823063},
+            population: 1
+        }
+    };
+
+
+
+    function initMap() {
+
+
+
+
+
+        var myLatLng = {lat: 51.864677, lng: 4.4781};
+        var mapDiv = document.getElementById('map');
+
+
+        var customMapType = new google.maps.StyledMapType([
+            {
+                stylers: [
+                    {hue: '#006FBC'},
+                    { saturation: -88 }
+                ]
+            }
+        ], {
+            name: 'Custom Style'
+        });
+
+        var customMapTypeId = 'custom_style';
+
+        var map = new google.maps.Map(mapDiv, {
+            zoom: 14,
+            center: myLatLng,
+            mapTypeControlOptions: {
+                mapTypeIds: [google.maps.MapTypeId.ROADMAP, customMapTypeId]
+            }
+        });
+
+
+
+
+
+
+        map.mapTypes.set(customMapTypeId, customMapType);
+        map.setMapTypeId(customMapTypeId);
+
+        for (var city in citymap) {
+            // Add the circle for this city to the map.
+            var cityCircle = new google.maps.Circle({
+                strokeColor: '#0270B5',
+                strokeOpacity: 0.8,
+                strokeWeight: 16,
+                fillColor: '#ffffff',
+                fillOpacity: 1,
+                map: map,
+                center: citymap[city].center,
+                radius: Math.sqrt(citymap[city].population) * 100
+            });
+        }
+    }
+
+
+</script>
+
+<script src="https://maps.googleapis.com/maps/api/js?callback=initMap" async defer></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="js/bootstrap.min.js"></script>
+</body>
+</html>

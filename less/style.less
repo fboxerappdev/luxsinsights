@@ -64,6 +64,9 @@ ul{
   max-width: 1500px;
   padding: 0 30px;
   width: 100%;
+  &.showchart .chart-list-item{
+	opacity: 1 !important;
+  }
   .chart-list-item{
 	cursor: pointer;
 	float: left;
@@ -292,6 +295,19 @@ ul{
   margin: -40px -60px;
   padding: 0 0 40px;
   height:220px;
+  &.big{
+	height:350px;
+  }
+}
+
+.map-content{
+   color:Red;
+   p{
+	 color:red;
+	 span{
+	   color:red;
+	 }
+   }
 }
 
 .gray-box{
@@ -337,7 +353,7 @@ ul{
 	  li{
 		border-bottom: 1px solid #e2e2e2;
 		font-size: 21px;
-		padding: 0;
+		padding: 0 20px 0 0;
 		&:extend(.blockin);
 		&>i{
 		  color: #fff;
@@ -385,6 +401,14 @@ ul{
 		}
 	  }
 	}
+	.slimScrollBar{
+	  background: #0270b5 none repeat scroll 0 0 !important;
+	  border-radius: 0 !important;
+	  opacity: 1 !important;
+	}
+	.slimScrollRail {
+	  border-radius: 0 !important;
+	}
   }
 }
 .main-detail-box{
@@ -396,7 +420,7 @@ ul{
   .detail-content{
 	display: table;
 	margin: 0 auto;
-	max-width: 1500px;
+	max-width: 1400px;
 	width: 100%;
 	.main-detail-item{
 	  display: none;
@@ -512,6 +536,116 @@ ul{
 	}
   }
 }
+.tab-list{
+  &:extend(.blockin);
+  ul{
+    display: table;
+    margin: 50px auto 0;
+    max-width: 1500px;
+    text-align: center;
+    width: 100%;
+    li{
+      cursor: pointer;
+      display: inline-block;
+      margin: 0 35px;
+      padding: 0 10px;
+      width: 170px;
+      position:relative;
+
+      &.active:before {
+        border-color: #eeeeee transparent;
+        border-style: none solid solid;
+        border-width: 21px;
+        content: "";
+        left: 50%;
+        margin-left: -21px;
+        position: absolute;
+        top: 110%;
+      }
+      img{
+        width: 120px;
+      }
+      span{
+        color: #2f76b6;
+        display: inline-block;
+        font-size: 30px;
+        margin-top: 8px;
+        width: 100%;
+      }
+    }
+  }
+}
+
+.dtl-box-item{
+  background: #fff none repeat scroll 0 0;
+  box-shadow: 0 5px 3px -2px #bababa;
+  margin: 50px 0;
+  overflow: hidden;
+  .slimScrollBar{
+    background: #0270b5 none repeat scroll 0 0 !important;
+    border-radius: 0 !important;
+    opacity: 1 !important;
+  }
+  .slimScrollRail{
+    border-radius: 0 !important;
+  }
+  h3{
+    background: #4d5360 none repeat scroll 0 0;
+    border-top: 10px solid #0270b5;
+    color: #fff;
+    font-size: 27px;
+    padding: 10px 20px;
+    margin:0;
+    span{
+      background: transparent url("../images/toggle.png") repeat scroll 0 0;
+      float: right;
+      height: 31px;
+      width: 46px;
+      cursor: pointer;
+    }
+  }
+  .dtl-item-pt{
+    height: 370px;
+    &.change-up b{
+      background: #68A93D none repeat scroll 0 0 !important;
+    }
+    &.change-down b{
+      background: #ED3531 none repeat scroll 0 0 !important;
+    }
+    a{
+      border-bottom: 1px solid #e5e5e5;
+      display: inline-block;
+      font-size: 22px;
+      padding: 10px 20px;
+      width: 100%;
+      span{
+        float: right;
+        margin-right: 10px;
+      }
+      .pro-bar{
+        float: right;
+        width: 180px;
+        div{
+          background: #ededed none repeat scroll 0 0;
+          float: right;
+          height: 19px;
+          margin: 6px 10px;
+          position: relative;
+          width: 120px;
+          b{
+            background: #0270B5 none repeat scroll 0 0;
+            height: 100%;
+            position: absolute;
+            width: 1%;
+            &:extend(.transition);
+          }
+        }
+      }
+    }
+  }
+}
+
+
 
 
 footer{

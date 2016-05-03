@@ -1,11 +1,13 @@
 .blockin,
-.gray-box .notification-sheet ul li {
+.gray-box .notification-sheet ul li,
+.tab-list {
   display: inline-block;
   width: 100%;
 }
 .transition,
 .left-bar,
-.display-bar {
+.display-bar,
+.dtl-box-item .dtl-item-pt a .pro-bar div b {
   -webkit-transition: all 0.3s ease 0s;
   -moz-transition: all 0.3s ease 0s;
   -o-transition: all 0.3s ease 0s;
@@ -65,6 +67,9 @@ ul {
   max-width: 1500px;
   padding: 0 30px;
   width: 100%;
+}
+.charts-list.showchart .chart-list-item {
+  opacity: 1 !important;
 }
 .charts-list .chart-list-item {
   cursor: pointer;
@@ -290,6 +295,18 @@ ul {
   padding: 0 0 40px;
   height: 220px;
 }
+.gmap.big {
+  height: 350px;
+}
+.map-content {
+  color: Red;
+}
+.map-content p {
+  color: red;
+}
+.map-content p span {
+  color: red;
+}
 .gray-box {
   background: #eeeeee none repeat scroll 0 0;
   float: left;
@@ -336,7 +353,7 @@ ul {
 .gray-box .notification-sheet ul li {
   border-bottom: 1px solid #e2e2e2;
   font-size: 21px;
-  padding: 0;
+  padding: 0 20px 0 0;
 }
 .gray-box .notification-sheet ul li > i {
   color: #fff;
@@ -382,6 +399,14 @@ ul {
   margin-right: 3px;
   padding: 6px 0;
 }
+.gray-box .notification-sheet .slimScrollBar {
+  background: #0270b5 none repeat scroll 0 0 !important;
+  border-radius: 0 !important;
+  opacity: 1 !important;
+}
+.gray-box .notification-sheet .slimScrollRail {
+  border-radius: 0 !important;
+}
 .main-detail-box {
   background: #eeeeee none repeat scroll 0 0;
   float: left;
@@ -392,7 +417,7 @@ ul {
 .main-detail-box .detail-content {
   display: table;
   margin: 0 auto;
-  max-width: 1500px;
+  max-width: 1400px;
   width: 100%;
 }
 .main-detail-box .detail-content .main-detail-item {
@@ -491,6 +516,108 @@ ul {
 }
 .main-detail-box .detail-content .main-detail-item .data-table .table tbody tr.inner-row-2 td:first-child {
   padding-left: 25px;
+}
+.tab-list ul {
+  display: table;
+  margin: 50px auto 0;
+  max-width: 1500px;
+  text-align: center;
+  width: 100%;
+}
+.tab-list ul li {
+  cursor: pointer;
+  display: inline-block;
+  margin: 0 35px;
+  padding: 0 10px;
+  width: 170px;
+  position: relative;
+}
+.tab-list ul li.active:before {
+  border-color: #eeeeee transparent;
+  border-style: none solid solid;
+  border-width: 21px;
+  content: "";
+  left: 50%;
+  margin-left: -21px;
+  position: absolute;
+  top: 110%;
+}
+.tab-list ul li img {
+  width: 120px;
+}
+.tab-list ul li span {
+  color: #2f76b6;
+  display: inline-block;
+  font-size: 30px;
+  margin-top: 8px;
+  width: 100%;
+}
+.dtl-box-item {
+  background: #fff none repeat scroll 0 0;
+  box-shadow: 0 5px 3px -2px #bababa;
+  margin: 50px 0;
+  overflow: hidden;
+}
+.dtl-box-item .slimScrollBar {
+  background: #0270b5 none repeat scroll 0 0 !important;
+  border-radius: 0 !important;
+  opacity: 1 !important;
+}
+.dtl-box-item .slimScrollRail {
+  border-radius: 0 !important;
+}
+.dtl-box-item h3 {
+  background: #4d5360 none repeat scroll 0 0;
+  border-top: 10px solid #0270b5;
+  color: #fff;
+  font-size: 27px;
+  padding: 10px 20px;
+  margin: 0;
+}
+.dtl-box-item h3 span {
+  background: transparent url("../images/toggle.png") repeat scroll 0 0;
+  float: right;
+  height: 31px;
+  width: 46px;
+  cursor: pointer;
+}
+.dtl-box-item .dtl-item-pt {
+  height: 370px;
+}
+.dtl-box-item .dtl-item-pt.change-up b {
+  background: #68A93D none repeat scroll 0 0 !important;
+}
+.dtl-box-item .dtl-item-pt.change-down b {
+  background: #ED3531 none repeat scroll 0 0 !important;
+}
+.dtl-box-item .dtl-item-pt a {
+  border-bottom: 1px solid #e5e5e5;
+  display: inline-block;
+  font-size: 22px;
+  padding: 10px 20px;
+  width: 100%;
+}
+.dtl-box-item .dtl-item-pt a span {
+  float: right;
+  margin-right: 10px;
+}
+.dtl-box-item .dtl-item-pt a .pro-bar {
+  float: right;
+  width: 180px;
+}
+.dtl-box-item .dtl-item-pt a .pro-bar div {
+  background: #ededed none repeat scroll 0 0;
+  float: right;
+  height: 19px;
+  margin: 6px 10px;
+  position: relative;
+  width: 120px;
+}
+.dtl-box-item .dtl-item-pt a .pro-bar div b {
+  background: #0270B5 none repeat scroll 0 0;
+  height: 100%;
+  position: absolute;
+  width: 1%;
 }
 footer {
   background: #4d5360 none repeat scroll 0 0;
