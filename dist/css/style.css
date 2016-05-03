@@ -1,3 +1,8 @@
+.blockin,
+.gray-box .notification-sheet ul li {
+  display: inline-block;
+  width: 100%;
+}
 .transition,
 .left-bar,
 .display-bar {
@@ -231,25 +236,41 @@ ul {
   float: right;
   text-align: right;
 }
-.display-bar header .right-head-area .top-links {
-  color: Red;
-}
 .display-bar header .right-head-area .top-links a {
-  background: #e6e6e6 none repeat scroll 0 0;
-  border-radius: 50%;
-  color: #3675b4;
   display: inline-block;
-  font-size: 17px;
+  height: 34px;
+  margin-left: 7px;
+  width: 34px;
+}
+.display-bar header .right-head-area .top-links a i {
+  background: transparent none repeat scroll 0 0 / cover;
+  display: inline-block;
   height: 32px;
-  margin-left: 5px;
-  padding: 4px 0;
-  text-align: center;
   width: 32px;
 }
-.display-bar header .right-head-area .top-links a:hover,
-.display-bar header .right-head-area .top-links a.active {
-  background: #3675b4 none repeat scroll 0 0;
-  color: #fff;
+.display-bar header .right-head-area .top-links a i.icon_home {
+  background-image: url("../images/iconsCartoon/icon_home.png");
+}
+.display-bar header .right-head-area .top-links a i.icon_home:hover {
+  background-image: url("../images/iconsCartoon/icon_homehover.png");
+}
+.display-bar header .right-head-area .top-links a i.icon_floorplan2D {
+  background-image: url("../images/iconsCartoon/icon_floorplan2D.png");
+}
+.display-bar header .right-head-area .top-links a i.icon_floorplan2D:hover {
+  background-image: url("../images/iconsCartoon/icon_floorplan2Dhover.png");
+}
+.display-bar header .right-head-area .top-links a i.icon_floorplanList {
+  background-image: url("../images/iconsCartoon/icon_floorplanList.png");
+}
+.display-bar header .right-head-area .top-links a i.icon_floorplanList:hover {
+  background-image: url("../images/iconsCartoon/icon_floorplanListhover.png");
+}
+.display-bar header .right-head-area .top-links a i.icon_logout {
+  background-image: url("../images/iconsCartoon/icon_logout.png");
+}
+.display-bar header .right-head-area .top-links a i.icon_logout:hover {
+  background-image: url("../images/iconsCartoon/icon_logouthover.png");
 }
 .display-bar header .right-head-area span {
   color: #8a8a8a;
@@ -267,6 +288,7 @@ ul {
   background: #fff none repeat scroll 0 0;
   margin: -40px -60px;
   padding: 0 0 40px;
+  height: 220px;
 }
 .gray-box {
   background: #eeeeee none repeat scroll 0 0;
@@ -308,46 +330,57 @@ ul {
   margin: 4px 0;
 }
 .gray-box .notification-sheet ul {
-  height: 424px;
+  height: 420px;
   overflow: hidden;
 }
 .gray-box .notification-sheet ul li {
   border-bottom: 1px solid #e2e2e2;
-  border-left: 14px solid #aaa;
   font-size: 21px;
-  padding: 9px 13px;
-}
-.gray-box .notification-sheet ul li.success {
-  border-left: 14px solid #ACD651;
-}
-.gray-box .notification-sheet ul li.info {
-  border-left: 14px solid #949FB1;
-}
-.gray-box .notification-sheet ul li.warning {
-  border-left: 14px solid #46BFBD;
-}
-.gray-box .notification-sheet ul li.danger {
-  border-left: 14px solid #FDB45C;
+  padding: 0;
 }
 .gray-box .notification-sheet ul li > i {
-  border: 1px solid #d4d4d4;
-  border-radius: 50%;
-  color: #c5c5c5;
+  color: #fff;
   font-size: 18px;
-  height: 34px;
+  height: 41px;
   margin-right: 12px;
-  padding: 8px 10px;
+  padding: 13px 8px;
   text-align: center;
-  width: 34px;
+  width: 41px;
+}
+.gray-box .notification-sheet ul li > i:first-child {
+  background: #46bfbd none repeat scroll 0 0 / cover;
+  display: inline-block;
+  padding: 6px 21px;
+  vertical-align: middle;
+}
+.gray-box .notification-sheet ul li > i.success {
+  background-color: #ABD153;
+  background-image: url("../images/iconsCartoon/icon_sustainability.png");
+}
+.gray-box .notification-sheet ul li > i.info {
+  background-color: #949FB1;
+  background-image: url("../images/iconsCartoon/icon_safety.png");
+}
+.gray-box .notification-sheet ul li > i.warning {
+  background-color: #41C0BD;
+  background-image: url("../images/iconsCartoon/icon_health.png");
+}
+.gray-box .notification-sheet ul li > i.danger {
+  background-color: #FBB45D;
+  background-image: url("../images/iconsCartoon/icon_finance.png");
+}
+.gray-box .notification-sheet ul li > i.stop {
+  background-color: #AE80B9;
+  background-image: url("../images/iconsCartoon/icon_usability.png");
 }
 .gray-box .notification-sheet ul li > i:last-child {
   border: medium none;
   color: #3675b4;
-  float: right;
-  font-size: 34px;
-  margin-right: 0;
-  padding: 0;
   cursor: pointer;
+  float: right;
+  font-size: 32px;
+  margin-right: 3px;
+  padding: 6px 0;
 }
 .main-detail-box {
   background: #eeeeee none repeat scroll 0 0;
@@ -579,7 +612,7 @@ footer p img {
     height: 614px;
   }
   .gray-box .notification-sheet ul {
-    height: 424px;
+    height: 420px;
   }
   .charts-list .chart-list-item .piechart .ch-pre .title {
     font-size: 30px;

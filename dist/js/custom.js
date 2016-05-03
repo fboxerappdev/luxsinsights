@@ -11,7 +11,6 @@ $(document).ready(function() {
     var winwid = $(document).width();
 
 
-
     $(".toggle").click(function(){
         $(".left-bar,.display-bar").toggleClass("open");
     });
@@ -34,7 +33,7 @@ $(document).ready(function() {
 
     $('.dtl-item-pt').slimScroll({
         height: hie,
-        railVisible: true,
+        railVisible: false,
         size: '6px',
         wheelStep: 3
     });
@@ -86,13 +85,13 @@ $(document).ready(function() {
         });
     }
 
-
-
-
     piechart("#financial","#FDB45C");
     piechart("#health","#46BFBD");
     piechart("#sustainability","#ACD651");
     piechart("#safety","#949FB1");
     piechart("#usability","#AE80BA");
+
+
+    var src = $(this).children("img").attr("src");
 
 });
