@@ -4,6 +4,28 @@
 
 
 
+
+
+
+
+
+function filterGlobal () {
+    $('#list-tabledata').DataTable().search(
+        $('#global_filter').val(),
+        $('#global_regex').prop('checked'),
+        $('#global_smart').prop('checked')
+    ).draw();
+}
+
+function filterColumn ( i ) {
+    $('#list-tabledata').DataTable().column( i ).search(
+        $('#col'+i+'_filter').val(),
+        $('#col'+i+'_regex').prop('checked'),
+        $('#col'+i+'_smart').prop('checked')
+    ).draw();
+}
+
+
 $(document).ready(function() {
 
     $('[data-toggle="popover"]').popover();
@@ -59,6 +81,21 @@ $(document).ready(function() {
         wheelStep: 14,
     });
 
+    setTimeout(function(){
+        $('.dataTables_scrollBody').slimScroll({
+            height: '370px',
+            railVisible: true,
+            alwaysVisible: true,
+            size: '11px',
+            wheelStep: 14
+        });
+    }, 1000);
+
+
+
+
+
+
     $("#tabid .chart-list-item").on("click",function(){
         $("#tabid .chart-list-item").removeClass("active");
         $(this).addClass("active");
@@ -68,6 +105,16 @@ $(document).ready(function() {
         $(".main-detail-item:eq('"+index+"')").fadeIn();
     });
 
+
+    $(".tab-list ul li").on("click",function(){
+        $(".tab-list ul li").removeClass("active");
+        $(this).addClass("active");
+        var index = $(this).index();
+        $(".main-detail-item").hide();
+        $(".main-detail-item:eq('"+index+"')").fadeIn(function(){
+            $.fn.dataTable.tables( {visible: true, api: true} ).columns.adjust();
+        });
+    });
 
 
     $('.chart').easyPieChart({
@@ -113,5 +160,26 @@ $(document).ready(function() {
         $(this).find("b").animate({
             width:mytxt+"%"
         },400);
+    });
+
+
+
+
+
+    $('#list-tabledata').DataTable( {
+        //ajax:           '../ajax/data/arrays.txt',
+        scrollY:        370,
+        scrollCollapse: true,
+        paging:         false
+    });
+
+
+
+    $('input.global_filter').on('keyup click', function(){
+        filterGlobal();
+    });
+
+    $('input.column_filter').on('keyup click', function () {
+        filterColumn( $(this).parents('tr').attr('data-column'));
     });
 });
