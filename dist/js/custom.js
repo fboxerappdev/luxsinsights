@@ -11,17 +11,13 @@
 
 function filterGlobal () {
     $('#list-tabledata').DataTable().search(
-        $('#global_filter').val(),
-        $('#global_regex').prop('checked'),
-        $('#global_smart').prop('checked')
+        $('#global_filter').val()
     ).draw();
 }
 
 function filterColumn ( i ) {
     $('#list-tabledata').DataTable().column( i ).search(
-        $('#col'+i+'_filter').val(),
-        $('#col'+i+'_regex').prop('checked'),
-        $('#col'+i+'_smart').prop('checked')
+        $('#col_filter').val()
     ).draw();
 }
 
@@ -167,7 +163,6 @@ $(document).ready(function() {
 
 
     $('#list-tabledata').DataTable( {
-        //ajax:           '../ajax/data/arrays.txt',
         scrollY:        370,
         scrollCollapse: true,
         paging:         false
@@ -179,7 +174,31 @@ $(document).ready(function() {
         filterGlobal();
     });
 
-    $('input.column_filter').on('keyup click', function () {
-        filterColumn( $(this).parents('tr').attr('data-column'));
+    var srcCol = "0";
+
+
+    $("#getvalue").val($("#getvalue option:first").val());
+
+    $("#getvalue").on("change",function () {
+
+            $( "#list-tabledata th" ).each(function( index ) {
+                var index = index.toString();
+                $('#list-tabledata').DataTable().column( index ).search('').draw();
+            });
+
+            var cc =$("#getvalue option:selected").val();
+            srcCol = cc.toString();
+
+            $('#list-tabledata').DataTable().column( srcCol ).search(
+                $('#col_filter').val()
+            ).draw();
+
     });
+
+    $('input.column_filter').on('keyup click', function () {
+        filterColumn(srcCol);
+    });
+
+
+
 });

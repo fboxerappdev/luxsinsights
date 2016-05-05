@@ -31,6 +31,9 @@
     <script type="text/javascript" src="js/jquery.dataTables.min.js"></script>
 
 
+    <script type="text/javascript" src="https://cdn.datatables.net/plug-ins/1.10.11/api/fnFilterClear.js"></script>
+
+
     <script src="js/jquery.slimscroll.min.js"></script>
 
 
@@ -309,16 +312,18 @@
                                     <form>
                                        <div class="col-md-8">
                                            <div class="form-group">
-                                               <input class="form-control global_filter" id="global_filter" type="text" placeholder="Search...">
+                                               <input class="form-control column_filter" id="col_filter" type="text" placeholder="Search...">
                                            </div>
                                        </div>
                                        <div class="col-md-4">
                                            <div class="form-group pd-right">
-                                               <select class="form-control">
-                                                   <option>Asset</option>
-                                                   <option>Portfolio</option>
-                                                   <option>Client</option>
-                                                   <option>City</option>
+                                               <select id="getvalue" class="form-control">
+                                                   <option value="0">Name</option>
+                                                   <option value="1">Position</option>
+                                                   <option value="2">office</option>
+                                                   <option value="3">Age</option>
+                                                   <option value="4">Start data/m2</option>
+                                                   <option value="5">Salary</option>
                                                </select>
                                                <button>
                                                    <i class="fa fa-search"></i>
@@ -836,11 +841,7 @@
     };
 
 
-
     function initMap() {
-
-
-
 
 
         var myLatLng = {lat: 51.864677, lng: 4.4781};
