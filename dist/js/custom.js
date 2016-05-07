@@ -96,7 +96,6 @@ $(document).ready(function() {
         $("#tabid .chart-list-item").removeClass("active");
         $(this).addClass("active");
         var index = $(this).index();
-
         $(".main-detail-item").hide();
         $(".main-detail-item:eq('"+index+"')").fadeIn();
     });
@@ -158,6 +157,22 @@ $(document).ready(function() {
         },400);
     });
 
+    var colors = ["#FDB45C","#46BFBD","#ACD651","#949FB1","#AE80BA"];
+
+    $(".bar-chart").each(function() {
+        $(">span",this).each(function(index){
+            var spanval= $(this).text();
+            var spanvalsing = spanval/5+"%";
+            $(this).css({
+                width:spanvalsing,
+                backgroundColor:colors[index]
+            });
+            $(this).empty();
+        })
+    });
+
+
+
 
 
 
@@ -198,7 +213,11 @@ $(document).ready(function() {
     $('input.column_filter').on('keyup click', function () {
         filterColumn(srcCol);
     });
-
-
+    $("#drowid").on("click",function(){
+        $("#drowmenu").toggle();
+    });
+    $("#drowid2").on("click",function(){
+        $("#drowmenu2").toggle();
+    });
 
 });
