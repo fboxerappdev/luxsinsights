@@ -854,7 +854,7 @@ footer p img {
     width: 270px;
   }
 }
-@media (min-width: 768px) {
+@media (min-width: 700px) {
   .gray-box .notification-sheet {
     margin-right: 20px;
   }
